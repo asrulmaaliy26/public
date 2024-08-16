@@ -19,11 +19,11 @@
                                     <a href="detail.php?id=1">BERANDA</a>
                                 </div>
                                 <h3 class="post-title title-lg">
-                                    <a href="detail.php?id=1">Post Title 1</a>
+                                    <a href="detail.php?id=1">MASA TA'ARUF SISWA MADRASAH</a>
                                 </h3>
                                 <ul class="post-meta">
                                     <li>
-                                        <a href="about.html">Author 1</a>
+                                        <a href="about.html">officialmaalhidayah</a>
                                     </li>
                                     <li>12 Aug 2024</li>
                                 </ul>
@@ -160,7 +160,7 @@
             <!-- Example Static Data for Recent Posts -->
             <div class="col-md-4 my-2 d-flex justify-content-center">
                 <div class="card" style="width: 18rem;">
-                    <p class="text-bg-success text-center">Post Title 1</p>
+                    <p class="text-bg-success text-center">MASA TA'ARUF SISWA MADRASAH</p>
                     <img class="post-img" style="height: 350px; object-fit: cover; width: 100%;" src="assets/images/Header.jpg" alt="Card image cap">
                     <a href="detail.php?id=1" class="text-decoration-none text-dark">
                         <div class="card-body text-center">
@@ -171,8 +171,8 @@
             </div>
             <div class="col-md-4 my-2 d-flex justify-content-center">
                 <div class="card" style="width: 18rem;">
-                    <p class="text-bg-success text-center">Post Title 2</p>
-                    <img class="post-img" style="height: 350px; object-fit: cover; width: 100%;" src="assets/images/Header.jpg" alt="Card image cap">
+                    <p class="text-bg-success text-center">JUARA 2 EKONOMI MA</p>
+                    <img class="post-img" style="height: 350px; object-fit: cover; width: 100%;" src="assets/images/Prestasi Juara2 Ekonomi MA.jpg" alt="Card image cap">
                     <a href="detail.php?id=2" class="text-decoration-none text-dark">
                         <div class="card-body text-center">
                             <button style="background-color: #88D66C; border:none; width: 200px;" type="button" class="btn btn-custom justify-content-center mt-4 mb-4">Lihat Postingan</button>
@@ -182,8 +182,8 @@
             </div>
             <div class="col-md-4 my-2 d-flex justify-content-center">
                 <div class="card" style="width: 18rem;">
-                    <p class="text-bg-success text-center">Post Title 2</p>
-                    <img class="post-img" style="height: 350px; object-fit: cover; width: 100%;" src="assets/images/Header.jpg" alt="Card image cap">
+                    <p class="text-bg-success text-center">JUARA 2 MATEMATIKA</p>
+                    <img class="post-img" style="height: 350px; object-fit: cover; width: 100%;" src="assets/images/Prestasi Juara2 Matematika MA.jpg" alt="Card image cap">
                     <a href="detail.php?id=2" class="text-decoration-none text-dark">
                         <div class="card-body text-center">
                             <button style="background-color: #88D66C; border:none; width: 200px;" type="button" class="btn btn-custom justify-content-center mt-4 mb-4">Lihat Postingan</button>
@@ -222,7 +222,7 @@
                     <div class="post-body">
                         <h3 class="post-title">
                             <a href="detail.php?id=1" class="text-decoration-none text-dark">
-                                Kegiatan 1
+                                MASA TA'ARUF SISWA MADRASAH
                             </a>
                         </h3>
                         <ul class="post-meta">
@@ -239,17 +239,17 @@
             <div class="col-md-3 col-sm-6">
                 <div class="post post-thumb">
                     <a href="detail.php?id=2" class="text-decoration-none text-dark post-img">
-                        <img src="assets/images/Header.jpg" alt="Post Image 2">
+                        <img src="assets/images/Prestasi Juara2 Ekonomi MA.jpg" alt="Post Image 2">
                     </a>
                     <div class="post-body">
                         <h3 class="post-title">
                             <a href="detail.php?id=2" class="text-decoration-none text-dark">
-                                Kegiatan 2
+                                JUARA 2 EKONOMI MA
                             </a>
                         </h3>
                         <ul class="post-meta">
                             <li>
-                                <a style="color: #000;" href="about.html">kegiatan</a>
+                                <a style="color: #000;" href="about.html">prestasi</a>
                             </li>
                             <li style="color: #000;">
                                 2024-08-15
@@ -262,17 +262,17 @@
             <div class="col-md-3 col-sm-6">
                 <div class="post post-thumb">
                     <a href="detail.php?id=1" class="text-decoration-none text-dark post-img">
-                        <img src="assets/images/Header.jpg" alt="Post Image 1">
+                        <img src="assets/images/Prestasi Juara2 Matematika MA.jpg" alt="Post Image 1">
                     </a>
                     <div class="post-body">
                         <h3 class="post-title">
                             <a href="detail.php?id=1" class="text-decoration-none text-dark">
-                                Kegiatan 1
+                                JUARA 2 MATEMATIKA MA
                             </a>
                         </h3>
                         <ul class="post-meta">
                             <li>
-                                <a style="color: #000;" href="about.html">kegiatan</a>
+                                <a style="color: #000;" href="about.html">prestasi</a>
                             </li>
                             <li style="color: #000;">
                                 2024-08-16
@@ -284,12 +284,12 @@
             <div class="col-md-3 col-sm-6">
                 <div class="post post-thumb">
                     <a href="detail.php?id=2" class="text-decoration-none text-dark post-img">
-                        <img src="assets/images/Header.jpg" alt="Post Image 2">
+                        <img src="assets/images/silaturahmi.png" alt="Post Image 2">
                     </a>
                     <div class="post-body">
                         <h3 class="post-title">
                             <a href="detail.php?id=2" class="text-decoration-none text-dark">
-                                Kegiatan 2
+                                SILATURAHMI WALI SANTRI PUTRI
                             </a>
                         </h3>
                         <ul class="post-meta">
