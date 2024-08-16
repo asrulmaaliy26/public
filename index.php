@@ -303,11 +303,6 @@
                     </div>
                 </div>
             </div>
-            <!-- Add more posts as needed -->
-            <!-- Example when no posts available -->
-            <!--
-            <p>No recent posts available.</p>
-            -->
         </div>
     </div>
 </div>
