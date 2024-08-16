@@ -1,6 +1,18 @@
-<?php include 'base.php'; ?>
-<?php include 'data.php'; ?>
-<?php $media_url = 'assets/images/' ?>
+<?php 
+
+include 'base.php';
+
+require 'data.php';
+
+$sorted_posts = sortByIdDesc($data);
+$filtered_by_kegiatan = filterByCategoryKegiatan($data);
+$filtered_by_jenis = filterByJenis($data, 2);
+$filtered_by_tingkat = filterByTingkat($data, 1);
+$filtered_by_jenis_and_tingkat = filterByJenisAndTingkat($data, 2, 1);
+
+$media_url = 'assets/images/' 
+
+?>
 
 <!-- hot-post -->
 <div class="container">
@@ -9,7 +21,7 @@
             <div class="post-img">
                 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
-                        <!-- Example Static Data for Carousel -->
+                        
                         <div class="carousel-item active">
                             <a href="detail.php?id=1" class="post-img">
                                 <img src="assets/images/Header.jpg" alt="Post Title 1">
@@ -29,6 +41,7 @@
                                 </ul>
                             </div>
                         </div>
+
                         <div class="carousel-item">
                             <a href="detail.php?id=2" class="post-img">
                                 <img src="assets/images/Header.jpg" alt="Post Title 2">
@@ -88,50 +101,48 @@
 
 
 <div class="py-5 header-main">
-        <div class="container">
-        <div class="row">
-            <div class="col-md-3 mb-4">
-                <div class="stat-card p-4">
-                <div class="stat-icon">
-                    <i class="fas fa-chalkboard-teacher"></i>
-                </div>
-                
-                <div class="stat-number">271</div>
-                <div class="stat-description">Pendidik & Tenaga Kependidikan</div>
-                </div>
+    <div class="container">
+    <div class="row">
+        <div class="col-md-3 mb-4">
+            <div class="stat-card p-4">
+            <div class="stat-icon">
+                <i class="fas fa-chalkboard-teacher"></i>
             </div>
-            <div class="col-md-3 mb-4">
-                <div class="stat-card p-4">
-                <div class="stat-icon">
-                    <i class="fas fa-user-graduate"></i>
-                </div>
-                <div class="stat-number">13132</div>
-                <div class="stat-description">Peserta Didik</div>
-                </div>
-            </div>
-            <div class="col-md-3 mb-4">
-                <div class="stat-card p-4">
-                <div class="stat-icon">
-                    <i class="fas fa-graduation-cap"></i>
-                </div>
-                <div class="stat-number">12580</div>
-                <div class="stat-description">Alumni</div>
-                </div>
-            </div>
-            <div class="col-md-3 mb-4">
-                <div class="stat-card p-4">
-                <div class="stat-icon">
-                    <i class="fas fa-clipboard-list"></i>
-                </div>
-                <div class="stat-number">15983</div>
-                <div class="stat-description">Pendaftar Calon Peserta Didik</div>
-                </div>
-            </div>
+            
+            <div class="stat-number">271</div>
+            <div class="stat-description">Pendidik & Tenaga Kependidikan</div>
             </div>
         </div>
+        <div class="col-md-3 mb-4">
+            <div class="stat-card p-4">
+            <div class="stat-icon">
+                <i class="fas fa-user-graduate"></i>
+            </div>
+            <div class="stat-number">13132</div>
+            <div class="stat-description">Peserta Didik</div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-4">
+            <div class="stat-card p-4">
+            <div class="stat-icon">
+                <i class="fas fa-graduation-cap"></i>
+            </div>
+            <div class="stat-number">12580</div>
+            <div class="stat-description">Alumni</div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-4">
+            <div class="stat-card p-4">
+            <div class="stat-icon">
+                <i class="fas fa-clipboard-list"></i>
+            </div>
+            <div class="stat-number">15983</div>
+            <div class="stat-description">Pendaftar Calon Peserta Didik</div>
+            </div>
+        </div>
+        </div>
+    </div>
 </div>
-
-
 
 <!-- sec 2 -->
 <div class="container-fluid my-5 i2 text-dark">
@@ -157,40 +168,20 @@
     <div class="container my-5 py-5 bg-light">
         <div class="row">
             <h4 class="text-center mb-5">SOROTAN</h4>
-            <!-- Example Static Data for Recent Posts -->
-            <div class="col-md-4 my-2 d-flex justify-content-center">
-                <div class="card" style="width: 18rem;">
-                    <p class="text-bg-success text-center">MASA TA'ARUF SISWA MADRASAH</p>
-                    <img class="post-img" style="height: 350px; object-fit: cover; width: 100%;" src="assets/images/Header.jpg" alt="Card image cap">
-                    <a href="detail.php?id=1" class="text-decoration-none text-dark">
-                        <div class="card-body text-center">
-                            <button style="background-color: #88D66C; border:none; width: 200px;" type="button" class="btn btn-custom justify-content-center mt-4 mb-4">Lihat Postingan</button>
-                        </div>
-                    </a>
+            <?php $limited_sorted_posts = array_slice($sorted_posts, 0, 3); // Membatasi hingga 3 data
+            foreach ($limited_sorted_posts as $post): ?>
+                <div class="col-md-4 my-2 d-flex justify-content-center">
+                    <div class="card" style="width: 18rem;">
+                        <p class="text-bg-success text-center"><?= $post['title'] ?></p>
+                        <img class="post-img" style="height: 350px; object-fit: cover; width: 100%;" src="<?= $media_url . $post['image'] ?>" alt="Card image cap">
+                        <a href="detail.php?id=1" class="text-decoration-none text-dark">
+                            <div class="card-body text-center">
+                                <button style="background-color: #88D66C; border:none; width: 200px;" type="button" class="btn btn-custom justify-content-center mt-4 mb-4">Lihat Postingan</button>
+                            </div>
+                        </a>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-4 my-2 d-flex justify-content-center">
-                <div class="card" style="width: 18rem;">
-                    <p class="text-bg-success text-center">JUARA 2 EKONOMI MA</p>
-                    <img class="post-img" style="height: 350px; object-fit: cover; width: 100%;" src="assets/images/Prestasi Juara2 Ekonomi MA.jpg" alt="Card image cap">
-                    <a href="detail.php?id=2" class="text-decoration-none text-dark">
-                        <div class="card-body text-center">
-                            <button style="background-color: #88D66C; border:none; width: 200px;" type="button" class="btn btn-custom justify-content-center mt-4 mb-4">Lihat Postingan</button>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-4 my-2 d-flex justify-content-center">
-                <div class="card" style="width: 18rem;">
-                    <p class="text-bg-success text-center">JUARA 2 MATEMATIKA</p>
-                    <img class="post-img" style="height: 350px; object-fit: cover; width: 100%;" src="assets/images/Prestasi Juara2 Matematika MA.jpg" alt="Card image cap">
-                    <a href="detail.php?id=2" class="text-decoration-none text-dark">
-                        <div class="card-body text-center">
-                            <button style="background-color: #88D66C; border:none; width: 200px;" type="button" class="btn btn-custom justify-content-center mt-4 mb-4">Lihat Postingan</button>
-                        </div>
-                    </a>
-                </div>
-            </div>
+            <?php endforeach; ?>
             <!-- Add more posts as needed -->
             <!-- Example when no posts available -->
             <!--
@@ -307,36 +298,5 @@
     </div>
 </div>
 <!-- end featured-posts -->
-
-
-
-<!-- <h1>Posts</h1>
-<?php
-// Initialize counter
-$counter = 0;
-$limit = 1; // Limit the number of posts displayed
-
-foreach ($data['post'] as $post):
-    // Display post
-    ?>
-    <h2><?php echo $post['title']; ?></h2>
-    <p><?php echo $post['content']; ?></p>
-    
-    <p><strong>Category:</strong> <?php echo $data['category'][$post['category_id']]['name']; ?></p>
-    <p><strong>Pendidikan:</strong> <?php echo $data['pendidikan'][$post['pendidikan_id']]['name']; ?></p>
-    <p><strong>Tingkat:</strong> <?php echo $data['tingkat'][$post['tingkat_id']]['name']; ?></p>
-    <p><strong>Jenis:</strong> <?php echo $data['jenis'][$post['jenis_id']]['name']; ?></p>
-    <img src="<?php echo $media_url . $post['image']; ?>" alt="">
-    
-    <?php
-    // Increment counter
-    $counter++;
-    // Break loop if counter exceeds limit
-    if ($counter >= $limit) {
-        break;
-    }
-endforeach;
-?> -->
-
 
 <?php include 'footer.php'; ?>
