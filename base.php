@@ -1,3 +1,7 @@
+<?php
+$currentPage = basename($_SERVER['PHP_SELF']);
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -11,9 +15,8 @@
     <link rel="stylesheet" href="assets/css/fonts.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/carousnap/carousnap@v1.3/carousnap/carousnap.css" type="text/css" />
     <link rel="stylesheet" href="assets/css/style.css">
-	
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
 </head>
 <body class="page-home">
     <header class="header-main">
@@ -30,24 +33,24 @@
                         <div id="navbarMain" class="collapse navbar-collapse">
                             <ul class="navbar-nav me-auto">
                                 <li class="nav-item">
-                                    <a href="index.php" class="nav-link">Home</a>
+                                    <a href="index.php" class="nav-link <?= $currentPage == 'index.php' ? 'active' : '' ?>">Home</a>
                                 </li>
                                 <li class="nav-item dropdown">
-                                    <a class="dropdown-toggle nav-link" id="dropdown01" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tentang Kami</a>
+                                    <a class="dropdown-toggle nav-link <?= in_array($currentPage, ['visimisi.php', 'strukturorganisasi.php', 'prestasima.php']) ? 'active' : '' ?>" id="dropdown01" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tentang Kami</a>
                                     <ul class="dropdown-menu" aria-labelledby="dropdown01">
-                                        <li><a class="dropdown-item" href="visimisi.php">Visi Misi</a></li>
-                                        <li><a class="dropdown-item" href="strukturorganisasi.php">Struktur Organisasi</a></li>
-                                        <li><a class="dropdown-item" href="prestasima.php">Prestasi</a></li>
+                                        <li><a class="dropdown-item <?= $currentPage == 'visimisi.php' ? 'active' : '' ?>" href="visimisi.php">Visi Misi</a></li>
+                                        <li><a class="dropdown-item <?= $currentPage == 'strukturorganisasi.php' ? 'active' : '' ?>" href="strukturorganisasi.php">Struktur Organisasi</a></li>
+                                        <li><a class="dropdown-item <?= $currentPage == 'prestasima.php' ? 'active' : '' ?>" href="prestasima.php">Prestasi</a></li>
                                     </ul>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="berita.php" class="nav-link">Berita</a>
+                                    <a href="berita.php" class="nav-link <?= $currentPage == 'berita.php' ? 'active' : '' ?>">Berita</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="fasilitas.php" class="nav-link">Fasilitas</a>
+                                    <a href="fasilitas.php" class="nav-link <?= $currentPage == 'fasilitas.php' ? 'active' : '' ?>">Fasilitas</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="contact.php" class="nav-link">Contact</a>
+                                    <a href="contact.php" class="nav-link <?= $currentPage == 'contact.php' ? 'active' : '' ?>">Contact</a>
                                 </li>
                             </ul>
                             <ul class="navbar-nav ms-auto">
@@ -77,4 +80,3 @@
 
     <main class="main">
         <!-- Main content here -->
-

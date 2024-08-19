@@ -79,9 +79,9 @@
 	</footer>
 	<!-- end footer-main -->
 
-	<script src="{% static 'node_modules/jquery/dist/jquery.min.js' %}"></script>
-	<script src="{% static 'node_modules/popper.js/dist/umd/popper.min.js' %}"></script>
-	<script src="{% static 'node_modules/bootstrap/dist/js/bootstrap.min.js' %}"></script>
-	<script src="{% static 'assets/js/app.js' %}"></script>
+	<script src="node_modules/jquery/dist/jquery.min.js"></script>
+	<script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+	<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="assets/js/app.js"></script>
 </body>
 </html>

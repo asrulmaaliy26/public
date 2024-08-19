@@ -36,19 +36,12 @@ $media_url = 'assets/images/'
 </head>
 <body>
     <h1>Post List with IDs</h1>
-    <?php foreach ($data['post'] as $post_id => $post): ?>
-        <div class="post">
-            <h2><?= $post['title'] ?> (ID: <?= $post_id ?>)</h2>
-            <p><?= $post['content'] ?></p>
-            <img src="<?= $post['image'] ?>" alt="<?= $post['title'] ?>">
-        </div>
-    <?php endforeach; ?>
     <?php 
     
     $limited_sorted_posts = array_slice($sorted_posts, 0, 3); // Membatasi hingga 3 data
-    foreach ($limited_sorted_posts as $post_id => $post): ?>
+    foreach ($limited_sorted_posts as $post): ?>
         <div class="post">
-            <h2><?= $post['title'] ?> (ID: <?= $post_id ?>)</h2>
+            <h2><?= $post['title'] ?> (ID: <?= $post ['id'] ?>)</h2>
             <p><?= $post['content'] ?></p>
             <img src="<?= $media_url . $post['image'] ?>" alt="<?= $post['title'] ?>">
         </div>
@@ -57,7 +50,7 @@ $media_url = 'assets/images/'
     <h1>Sorted Posts</h1>
     <?php foreach ($sorted_posts as $post): ?>
         <div class="post">
-            <h2><?= $post['title'] ?></h2>
+            <h2><?= $post['title'] ?> (ID: <?= $post ['id'] ?>)</h2>
             <p><?= $post['content'] ?></p>
             <img src="<?= $media_url . $post['image'] ?>" alt="<?= $post['title'] ?>">
         </div>
@@ -67,7 +60,7 @@ $media_url = 'assets/images/'
     <?php if (!empty($filtered_by_kegiatan)): ?>
         <?php foreach ($filtered_by_kegiatan as $post): ?>
             <div class="post">
-                <h2><?= $post['title'] ?></h2>
+                <h2><?= $post['title'] ?> (ID: <?= $post ['id'] ?>)</h2>
                 <p><?= $post['content'] ?></p>
                 <img src="<?= $media_url . $post['image'] ?>" alt="<?= $post['title'] ?>">
             </div>

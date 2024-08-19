@@ -51,11 +51,11 @@ $media_url = 'assets/images/'
                                     <a href="detail.php?id=2">BERANDA</a>
                                 </div>
                                 <h3 class="post-title title-lg">
-                                    <a href="detail.php?id=2">Post Title 2</a>
+                                    <a href="detail.php?id=2">MASA TA'ARUF SISWA MADRASAH</a>
                                 </h3>
                                 <ul class="post-meta">
                                     <li>
-                                        <a href="about.html">Author 2</a>
+                                        <a href="about.html">officialmaalhidayah</a>
                                     </li>
                                     <li>13 Aug 2024</li>
                                 </ul>
@@ -171,10 +171,11 @@ $media_url = 'assets/images/'
             <?php $limited_sorted_posts = array_slice($sorted_posts, 0, 3); // Membatasi hingga 3 data
             foreach ($limited_sorted_posts as $post): ?>
                 <div class="col-md-4 my-2 d-flex justify-content-center">
-                    <div class="card" style="width: 18rem;">
+                    <div class="card" style="width: 18rem;"
+                    >
                         <p class="text-bg-success text-center"><?= $post['title'] ?></p>
                         <img class="post-img" style="height: 350px; object-fit: cover; width: 100%;" src="<?= $media_url . $post['image'] ?>" alt="Card image cap">
-                        <a href="detail.php?id=1" class="text-decoration-none text-dark">
+                        <a href="detail.php?id=<?= $post['id'] ?>" class="text-decoration-none text-dark">
                             <div class="card-body text-center">
                                 <button style="background-color: #88D66C; border:none; width: 200px;" type="button" class="btn btn-custom justify-content-center mt-4 mb-4">Lihat Postingan</button>
                             </div>
@@ -182,11 +183,6 @@ $media_url = 'assets/images/'
                     </div>
                 </div>
             <?php endforeach; ?>
-            <!-- Add more posts as needed -->
-            <!-- Example when no posts available -->
-            <!--
-            <p>No recent posts available.</p>
-            -->
         </div>
     </div>
 </div>
@@ -205,15 +201,17 @@ $media_url = 'assets/images/'
         </div>
         <div class="row">
             <!-- Example Static Data for Featured Posts -->
+            <?php $limited_sorted_posts = array_slice($sorted_posts, 0, 4); // Membatasi hingga 3 data
+            foreach ($limited_sorted_posts as $post): ?>
             <div class="col-md-3 col-sm-6">
                 <div class="post post-thumb">
                     <a href="detail.php?id=1" class="text-decoration-none text-dark post-img">
-                        <img src="assets/images/Header.jpg" alt="Post Image 1">
+                        <img src="<?= $media_url . $post['image'] ?>" alt="Post Image 1">
                     </a>
                     <div class="post-body">
                         <h3 class="post-title">
-                            <a href="detail.php?id=1" class="text-decoration-none text-dark">
-                                MASA TA'ARUF SISWA MADRASAH
+                            <a href="detail.php?id=<?= $post['id'] ?>" class="text-decoration-none text-dark">
+                                <?= $post['title'] ?>
                             </a>
                         </h3>
                         <ul class="post-meta">
@@ -222,78 +220,14 @@ $media_url = 'assets/images/'
                             </li>
                             <li style="color: #000;">
                                 2024-08-16
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <div class="post post-thumb">
-                    <a href="detail.php?id=2" class="text-decoration-none text-dark post-img">
-                        <img src="assets/images/Prestasi Juara2 Ekonomi MA.jpg" alt="Post Image 2">
-                    </a>
-                    <div class="post-body">
-                        <h3 class="post-title">
-                            <a href="detail.php?id=2" class="text-decoration-none text-dark">
-                                JUARA 2 EKONOMI MA
-                            </a>
-                        </h3>
-                        <ul class="post-meta">
-                            <li>
-                                <a style="color: #000;" href="about.html">prestasi</a>
-                            </li>
-                            <li style="color: #000;">
-                                2024-08-15
                             </li>
                         </ul>
                     </div>
                 </div>
             </div>
             
-            <div class="col-md-3 col-sm-6">
-                <div class="post post-thumb">
-                    <a href="detail.php?id=1" class="text-decoration-none text-dark post-img">
-                        <img src="assets/images/Prestasi Juara2 Matematika MA.jpg" alt="Post Image 1">
-                    </a>
-                    <div class="post-body">
-                        <h3 class="post-title">
-                            <a href="detail.php?id=1" class="text-decoration-none text-dark">
-                                JUARA 2 MATEMATIKA MA
-                            </a>
-                        </h3>
-                        <ul class="post-meta">
-                            <li>
-                                <a style="color: #000;" href="about.html">prestasi</a>
-                            </li>
-                            <li style="color: #000;">
-                                2024-08-16
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <div class="post post-thumb">
-                    <a href="detail.php?id=2" class="text-decoration-none text-dark post-img">
-                        <img src="assets/images/silaturahmi.png" alt="Post Image 2">
-                    </a>
-                    <div class="post-body">
-                        <h3 class="post-title">
-                            <a href="detail.php?id=2" class="text-decoration-none text-dark">
-                                SILATURAHMI WALI SANTRI PUTRI
-                            </a>
-                        </h3>
-                        <ul class="post-meta">
-                            <li>
-                                <a style="color: #000;" href="about.html">kegiatan</a>
-                            </li>
-                            <li style="color: #000;">
-                                2024-08-15
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+            <?php endforeach; ?>
+            <!-- sdf -->
         </div>
     </div>
 </div>
