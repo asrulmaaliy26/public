@@ -15,7 +15,6 @@ $currentPage = basename($_SERVER['PHP_SELF']);
     <link rel="stylesheet" href="assets/css/fonts.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/carousnap/carousnap@v1.3/carousnap/carousnap.css" type="text/css" />
     <link rel="stylesheet" href="assets/css/style.css">
-    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body class="page-home">
@@ -36,7 +35,7 @@ $currentPage = basename($_SERVER['PHP_SELF']);
                                     <a href="index.php" class="nav-link <?= $currentPage == 'index.php' ? 'active' : '' ?>">Home</a>
                                 </li>
                                 <li class="nav-item dropdown">
-                                    <a class="dropdown-toggle nav-link <?= in_array($currentPage, ['visimisi.php', 'strukturorganisasi.php', 'prestasima.php']) ? 'active' : '' ?>" id="dropdown01" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tentang Kami</a>
+                                    <a class="nav-link dropdown-toggle <?= in_array($currentPage, ['visimisi.php', 'strukturorganisasi.php', 'prestasima.php']) ? 'active' : '' ?>" id="dropdown01" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tentang Kami</a>
                                     <ul class="dropdown-menu" aria-labelledby="dropdown01">
                                         <li><a class="dropdown-item <?= $currentPage == 'visimisi.php' ? 'active' : '' ?>" href="visimisi.php">Visi Misi</a></li>
                                         <li><a class="dropdown-item <?= $currentPage == 'strukturorganisasi.php' ? 'active' : '' ?>" href="strukturorganisasi.php">Struktur Organisasi</a></li>

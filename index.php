@@ -109,7 +109,7 @@ $media_url = 'assets/images/'
                 <i class="fas fa-chalkboard-teacher"></i>
             </div>
             
-            <div class="stat-number">271</div>
+            <div class="stat-number">35</div>
             <div class="stat-description">Pendidik & Tenaga Kependidikan</div>
             </div>
         </div>
@@ -118,8 +118,8 @@ $media_url = 'assets/images/'
             <div class="stat-icon">
                 <i class="fas fa-user-graduate"></i>
             </div>
-            <div class="stat-number">13132</div>
-            <div class="stat-description">Peserta Didik</div>
+            <div class="stat-number">131</div>
+            <div class="stat-description">Peserta Didik Putra</div>
             </div>
         </div>
         <div class="col-md-3 mb-4">
@@ -127,8 +127,8 @@ $media_url = 'assets/images/'
             <div class="stat-icon">
                 <i class="fas fa-graduation-cap"></i>
             </div>
-            <div class="stat-number">12580</div>
-            <div class="stat-description">Alumni</div>
+            <div class="stat-number">270</div>
+            <div class="stat-description">Peserta Didik Putri</div>
             </div>
         </div>
         <div class="col-md-3 mb-4">
@@ -136,7 +136,7 @@ $media_url = 'assets/images/'
             <div class="stat-icon">
                 <i class="fas fa-clipboard-list"></i>
             </div>
-            <div class="stat-number">15983</div>
+            <div class="stat-number">0</div>
             <div class="stat-description">Pendaftar Calon Peserta Didik</div>
             </div>
         </div>

@@ -2,30 +2,30 @@
 
 $data = [
     'category' => [
-        1 => ['name' => 'Kegiatan', 'description' => 'Informasi terbaru'],
-        2 => ['name' => 'Event', 'description' => 'Panduan dan cara belajar'],
+        1 => ['name' => 'Kegiatan'],
+        2 => ['name' => 'Event'],
     ],
 
     'pendidikan' => [
-        1 => ['name' => 'SD', 'description' => 'Sekolah Dasar'],
-        2 => ['name' => 'SMP', 'description' => 'Sekolah Menengah Pertama'],
-        3 => ['name' => 'SMA', 'description' => 'Sekolah Menengah Atas'],
-        4 => ['name' => 'SEMUA', 'description' => 'Sekolah Menengah Atas']
+        1 => ['name' => 'SD'],
+        2 => ['name' => 'SMP'],
+        3 => ['name' => 'SMA'],
+        4 => ['name' => 'SEMUA' ]
     ],
 
     'tingkat' => [
-        1 => ['name' => 'Kecamatan', 'description' => 'Tingkat dasar pendidikan'],
-        2 => ['name' => 'Kabupaten', 'description' => 'Tingkat menengah pendidikan'],
-        3 => ['name' => 'Provinsi', 'description' => 'Tingkat lanjutan pendidikan'],
-        4 => ['name' => 'Nasional', 'description' => 'Tingkat lanjutan pendidikan'],
-        5 => ['name' => 'Asia', 'description' => 'Tingkat lanjutan pendidikan'],
-        6 => ['name' => 'Pondok', 'description' => 'Tingkat lanjutan pendidikan']
+        1 => ['name' => 'Kecamatan' ],
+        2 => ['name' => 'Kabupaten' ],
+        3 => ['name' => 'Provinsi'],
+        4 => ['name' => 'Nasional'],
+        5 => ['name' => 'Asia'],
+        6 => ['name' => 'Pondok']
     ],
 
     'jenis' => [
-        1 => ['name' => 'Prestasi', 'description' => 'Kegiatan sosial dan komunitas'],
-        2 => ['name' => 'Akademik', 'description' => 'Kegiatan akademik dan pendidikan'],
-        3 => ['name' => 'Fasilitas', 'description' => 'Kegiatan olahraga dan kebugaran']
+        1 => ['name' => 'Prestasi'],
+        2 => ['name' => 'Akademik'],
+        3 => ['name' => 'Fasilitas']
     ],
 
     'post' => [
@@ -101,6 +101,13 @@ $data = [
         ]
     ]
 ];
+
+function getPostById($data, $post_id) {
+    if (isset($data['post'][$post_id])) {
+        return array_merge(['id' => $post_id], $data['post'][$post_id]);
+    }
+    return null; // Return null jika post tidak ditemukan
+}
 // Method untuk memfilter berdasarkan jenis
 function filterByJenis($data, $jenis_id) {
     $filtered_posts = [];
