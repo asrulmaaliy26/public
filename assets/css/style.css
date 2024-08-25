@@ -10,7 +10,7 @@ body, html{
 	font-family: 'Roboto';
 	font-style: normal;
 	font-weight: 300;
-	background: var(--hijau-background);
+	background: #ffffff;
 	color: #000000;
 }
 
@@ -18,7 +18,7 @@ a{
 	color: #ffffff;
 }
 a:hover, a:focus, a:active{
-	color: var(--hijau-link-after);
+	color: #215e21;
 }
 
 
@@ -146,12 +146,12 @@ a:hover, a:focus, a:active{
 }
 .navbar .dropdown-item:focus,
 .navbar .dropdown-item:hover{
-	background: var(--hijau-bg-card);
-	color: var(--hijau-link-after);
+	background: #29a59b;
+	color: #215e21;
 }
 .navbar .dropdown-item.active,
 .navbar .dropdown-item:active{
-	background: var(--hijau-link-after);
+	background: #215e21;
 	color: #fff;
 }
 
@@ -186,7 +186,7 @@ a:hover, a:focus, a:active{
 
 
 .footer-main{
-	background: var(--hijau-primary);
+	background: #14756D;
 	color: #daede2;
 	padding-top: 2em;
 }
@@ -290,12 +290,12 @@ a:hover, a:focus, a:active{
 }
 .post-body a:hover,
 .post-body a:focus{
-	color: var(--hijau-link-after) ;
+	color: #215e21 ;
 	text-decoration: none;
 }
 
 .post-category a{
-	color: var(--hijau-primary) ;
+	color: #14756D ;
 	font-weight: 500;
 	font-size: 0.9em;
 }
@@ -327,8 +327,8 @@ a:hover, a:focus, a:active{
     z-index: 1;
 }
 .section-title .title{
-	/* background: var(--hijau-primary); */
-	color: var(--hijau-primary);
+	/* background: #14756D; */
+	color: #14756D;
 	text-transform: uppercase;
 	font-size: 1.5em;
 	font-weight: 700;
@@ -375,8 +375,8 @@ a:hover, a:focus, a:active{
 	color: #daede2;
 }
 .list-group-item{
-	background: var(--hijau-bg-card);
-	border-color: var(--hijau-border);
+	background: #29a59b;
+	border-color: #234946;
 }
 
 .featured-posts .section-title{
