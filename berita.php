@@ -45,7 +45,7 @@ $total_pages = ceil($total_posts / $posts_per_page);
                         <div class="row border-bottom border-dark">
                             <div class="col-md-6 mb-4">
                                 <p class="mt-4">
-                                    <?php echo $post['content']; ?>
+                                    <?php echo truncateContent($post['content'], 50); ?>
                                 </p>
                             </div>
                             <div class="col-md-6">
@@ -112,7 +112,7 @@ $total_pages = ceil($total_posts / $posts_per_page);
                     </a>
                     <div class="card-body">
                         <h5 class="card-title"><?php echo $post['title']; ?></h5>
-                        <p class="card-text"><?php echo $post['content']; ?></p>
+                        <p class="card-text"><?php echo truncateContent($post['content'], 20); ?></p>
                     </div>
                 </div>
                 <?php 

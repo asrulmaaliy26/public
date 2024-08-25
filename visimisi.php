@@ -16,7 +16,7 @@
         <div class="row">
           <div style="width: 100%;" class="container">
           <img style="width: 100%;" src="assets/images/profillpi.png" alt=""></div>
-          <p class="pt-5" style="color: #000;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde consectetur laudantium, minima qui consequuntur esse asperiores explicabo nobis iste accusamus.</p>
+          <!-- <p class="pt-5" style="color: #000;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde consectetur laudantium, minima qui consequuntur esse asperiores explicabo nobis iste accusamus.</p> -->
         </div>
         
         <div class="row pt-5 pb-5">

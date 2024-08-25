@@ -56,24 +56,24 @@
             </div>
             <div class="row py-2">
                 <div class="col-4">
-                    <a style="color: #14756D;" href="https://twitter.com/stematelpwt">
-                        <i class="fab fa-twitter ikon fa-3x"></i>
+                    <a style="color: #14756D;" href="https://www.facebook.com/Alhidayah.20">
+                        <i class="fab fa-facebook ikon fa-3x"></i>
                     </a>
                 </div>
                 <div class="col-8 d-flex align-items-center">
-                    <a style="color: #14756D;" href="https://twitter.com/stematelpwt">
-                        maalhidayahofficial
+                    <a style="color: #14756D;" href="https://www.facebook.com/Alhidayah.20">
+                        MA Al Hidayah Kauman
                     </a>
                 </div>
             </div>
             <div class="row py-2">
                 <div class="col-4">
-                    <a style="color: #14756D;" href="https://www.facebook.com/stematelpwt">
+                    <a style="color: #14756D;" href="https://wa.me/+6282234639615">
                         <i class="fab fa-whatsapp ikon fa-3x"></i>
                     </a>
                 </div>
                 <div class="col-8 d-flex align-items-center">
-                <a style="color: #14756D;" href="https://www.facebook.com/stematelpwt">
+                <a style="color: #14756D;" href="https://wa.me/+6282234639615">
                         maalhidayahofficial
                 </a>
         </div>

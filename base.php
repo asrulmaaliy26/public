@@ -54,7 +54,7 @@ $currentPage = basename($_SERVER['PHP_SELF']);
                             </ul>
                             <ul class="navbar-nav ms-auto">
                                 <li class="nav-item">
-                                    <a href="https://wa.me/085784777797" class="nav-link">
+                                    <a href="https://wa.me/+6282234639615" class="nav-link">
                                         <i class="fab fa-whatsapp"></i>
                                     </a>
                                 </li>
@@ -64,8 +64,8 @@ $currentPage = basename($_SERVER['PHP_SELF']);
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="https://www.linkedin.com/in/asrul-maaliy-185712256/">
-                                        <i class="fab fa-linkedin"></i>
+                                    <a class="nav-link" href="https://www.facebook.com/Alhidayah.20">
+                                        <i class="fab fa-facebook"></i>
                                     </a>
                                 </li>
                             </ul>

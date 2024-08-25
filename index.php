@@ -22,7 +22,7 @@ $media_url = 'assets/images/'
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <a href="detail.php?id=1">
-                        <img src="assets/images/Header.jpg" class="d-block w-100 carousel-image" alt="Post Title 1">
+                        <img src="assets/images/Header.jpg" class="d-block w-100 carousel-image" alt="Post Title 1" style="height: 500px;	object-fit: cover;	object-position: center;">
                     </a>
                     <div class="carousel-caption d-none d-md-block" style="background: rgba(0, 0, 0, 0.5); padding: 10px;	border-radius: 5px;">
                         <div class="post-category">
@@ -40,7 +40,7 @@ $media_url = 'assets/images/'
 
                 <div class="carousel-item">
                     <a href="detail.php?id=2">
-                        <img src="assets/images/Header.jpg" class="d-block w-100 carousel-image" alt="Post Title 2">
+                        <img src="assets/images/Header.jpg" class="d-block w-100 carousel-image" alt="Post Title 2" style="height: 500px;	object-fit: cover;	object-position: center;">
                     </a>
                     <div class="carousel-caption d-none d-md-block" style="background: rgba(0, 0, 0, 0.5); padding: 10px;	border-radius: 5px;">
                         <div class="post-category">

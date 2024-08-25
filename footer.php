@@ -13,15 +13,15 @@
 							</a>
 						</li>
 						<li class="list-group-item">
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex accusamus cupiditate molestias aliquid quam consequatur.</p>
-							<p>&copy; Welison Menezes 2019</p>
+							<p>MA Al Hidayah dengan asrama Pondok Pesantren Tarbiyatul Quran Al Mannan memiliki misi Terwujudnya sekolah unggul dan rujukan pengemban Al-Qur’an, berakhlakul karimah, cerdas dalam IPTEK dan kuat dalam karakter.</p>
+							<p>&copy; asrulmaaliy26 2024</p>
 						</li>
 					</ul>
 				</div>
 				<div class="col-md-4">
                     <h4>PP Al Mannan<br></h4>
                     <p class="mt-4">Jl. KH Hasyim Asyari No.54, Kauman, Kec. Kauman, Kabupaten Tulungagung, Jawa Timur 66261</p>
-                    <p class="small">(0281) 632138</p>
+                    <p class="small"><a href="https://wa.me/+6282234639615">(0822) 34639615</a></p>
                     <p class="small"><a href="https://maalhidayahkauman.sch.id">https://maalhidayahkauman.sch.id</a></p>
                     <p class="small">Senin - Jumat: 7:00 - 16:00</p>
                     <p class="small">Sabtu: 8:00 - 12:00</p>
@@ -50,14 +50,14 @@
 								<a href="#">Privacy policy</a>
 							</li>
 							<li>
-								<a href="contact.html">Contact us</a>
+								<a href="contact.php">Contact us</a>
 							</li>
 						</ul>
 					</div>
 					<div class="col-sm-4">
 						<ul class="nav-footer text-right">
 							<li>
-								<a href="https://wa.me/085784777797">
+								<a href="https://wa.me/+6282234639615">
 									<i class="fab fa-whatsapp"></i>
 								</a>
 							</li>
