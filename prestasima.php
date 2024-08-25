@@ -90,9 +90,10 @@ include 'data.php';
             <div class="row pt-4">
                 <h2>Prestasi Terbaru</h2>
             </div>
-            <div class="row pb-5">
-                <?php 
+            <div class="row pb-5"><?php 
                 $recent_posts = filterByJenis($data, 1); 
+                $recent_posts = array_slice($recent_posts, 0, 2); // Membatasi hanya 5 postingan
+
                 if (!empty($recent_posts)) {
                     foreach ($recent_posts as $post) { ?>
                         <a href="detail.php?id=<?php echo $post['id']; ?>" class="text-decoration-none text-dark">
@@ -108,6 +109,7 @@ include 'data.php';
                 } else { ?>
                     <p><br></p>
                 <?php } ?>
+
             </div>
         </div>
     </div>

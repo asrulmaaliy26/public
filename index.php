@@ -15,69 +15,60 @@ $media_url = 'assets/images/'
 ?>
 
 <!-- hot-post -->
-<div class="container">
-    <div class="hot-post">
-        <div class="post post-thumb">
-            <div class="post-img">
-                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                    <div class="carousel-inner">
-                        
-                        <div class="carousel-item active">
-                            <a href="detail.php?id=1" class="post-img">
-                                <img src="assets/images/Header.jpg" alt="Post Title 1">
-                            </a>
-                            <div class="post-body">
-                                <div class="post-category">
-                                    <a href="detail.php?id=1">BERANDA</a>
-                                </div>
-                                <h3 class="post-title title-lg">
-                                    <a href="detail.php?id=1">MASA TA'ARUF SISWA MADRASAH</a>
-                                </h3>
-                                <ul class="post-meta">
-                                    <li>
-                                        <a href="about.html">officialmaalhidayah</a>
-                                    </li>
-                                    <li>12 Aug 2024</li>
-                                </ul>
-                            </div>
+<div class="hot-post">
+    <div class="post post-thumb">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <a href="detail.php?id=1">
+                        <img src="assets/images/Header.jpg" class="d-block w-100 carousel-image" alt="Post Title 1">
+                    </a>
+                    <div class="carousel-caption d-none d-md-block">
+                        <div class="post-category">
+                            <a href="detail.php?id=1" class="badge badge-primary">ERANDA</a>
                         </div>
-
-                        <div class="carousel-item">
-                            <a href="detail.php?id=2" class="post-img">
-                                <img src="assets/images/Header.jpg" alt="Post Title 2">
-                            </a>
-                            <div class="post-body">
-                                <div class="post-category">
-                                    <a href="detail.php?id=2">BERANDA</a>
-                                </div>
-                                <h3 class="post-title title-lg">
-                                    <a href="detail.php?id=2">MASA TA'ARUF SISWA MADRASAH</a>
-                                </h3>
-                                <ul class="post-meta">
-                                    <li>
-                                        <a href="about.html">officialmaalhidayah</a>
-                                    </li>
-                                    <li>13 Aug 2024</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <!-- Add more carousel items as needed -->
+                        <h3 class="post-title title-lg">
+                            <a href="detail.php?id=1" class="text-light">MASA TA'ARUF SISWA MADRASAH</a>
+                        </h3>
+                        <ul class="post-meta">
+                            <li><a href="about.html" class="text-light">officialmaalhidayah</a></li>
+                            <li class="text-light">12 Aug 2024</li>
+                        </ul>
                     </div>
-                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
                 </div>
+
+                <div class="carousel-item">
+                    <a href="detail.php?id=2">
+                        <img src="assets/images/Header.jpg" class="d-block w-100 carousel-image" alt="Post Title 2">
+                    </a>
+                    <div class="carousel-caption d-none d-md-block">
+                        <div class="post-category">
+                            <a href="detail.php?id=2" class="badge badge-primary">BERANDA</a>
+                        </div>
+                        <h3 class="post-title title-lg">
+                            <a href="detail.php?id=2" class="text-light">MASA TA'ARUF SISWA MADRASAH</a>
+                        </h3>
+                        <ul class="post-meta">
+                            <li><a href="about.html" class="text-light">officialmaalhidayah</a></li>
+                            <li class="text-light">13 Aug 2024</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Add more carousel items as needed -->
             </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
         </div>
-        <button class="header-main text-light py-3" style="width: 100%; font-size: 2em; font-weight: 700;">
-            <a href="https://ppdb.almannan.id/">- - -> PPDB <- - -</a>
-        </button>
     </div>
+    <button class="header-main text-light py-3" style="width: 100%; font-size: 2em; font-weight: 700;">
+        <a href="https://ppdb.almannan.id/" class="text-light">- - -> PPDB <- - -</a>
+    </button>
 </div>
 <!-- end hot-post -->
 

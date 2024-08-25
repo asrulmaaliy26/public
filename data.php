@@ -29,57 +29,17 @@ $data = [
     ],
 
     'post' => [
-        1 => [
-            'title' => "MASA TA'ARUF SISWA MADRASAH",
-            'content' => 'Informasi mengenai kegiatan belajar mengajar di sekolah.',
-            'image' => 'Header.jpg',
-            'category_id' => 1, // Foreign key to category
-            'pendidikan_id' => 3, // Foreign key to pendidikan
-            'tingkat_id' => 1, // Foreign key to tingkat
-            'jenis_id' => 2 // Foreign key to jenis
-        ],
-
-        2 => [
-            'title' => 'JUARA 2 EKONOMI MA',
-            'content' => 'Detail tentang workshop pendidikan yang akan diadakan.',
-            'image' => 'Prestasi Juara2 Ekonomi MA.jpg',
-            'category_id' => 2, // Foreign key to category
-            'pendidikan_id' => 3, // Foreign key to pendidikan
-            'tingkat_id' => 2, // Foreign key to tingkat
-            'jenis_id' => 1 // Foreign key to jenis
-        ],
-
-        3 => [
-            'title' => 'JUARA 2 MATEMATIKA',
-            'content' => 'Event olahraga yang diadakan bulan ini.',
-            'image' => 'Prestasi Juara2 Matematika MA.jpg',
-            'category_id' => 2, // Foreign key to category
-            'pendidikan_id' => 3, // Foreign key to pendidikan
-            'tingkat_id' => 2, // Foreign key to tingkat
-            'jenis_id' => 1 // Foreign key to jenis
-        ],
-
-        4 => [
-            'title' => 'SILATURAHMI WALI SANTRI PUTRI',
-            'content' => 'Event olahraga yang diadakan bulan ini.',
-            'image' => 'silaturahmi.png',
-            'category_id' => 1, // Foreign key to category
-            'pendidikan_id' => 3, // Foreign key to pendidikan
-            'tingkat_id' => 2, // Foreign key to tingkat
-            'jenis_id' => 2 // Foreign key to jenis
-        ],
-
-        5 => [
-            'title' => "KHOTMIL QUR'AN BIL HIFDHI",
-            'content' => "Alhamdulillah, selamat dan sukses untuk Muhammad Zidni Ilman Nafi'a bin Ahmad Hasyim. Semoga selalu Istiqomah, bermanfaat dan barokah ilmunya.",
-            'image' => 'khotmilquranbilhifdhi.jpg',
+        40 => [
+            'title' => "UPACARA PENURUNAN BENDERA BERSEJARAH",
+            'content' => "Hari ini, untuk pertama kalinya MA Al Hidayah menyelenggarakan upacara penurunan bendera dalam rangka Peringatan HUT RI ke-79. Panas terik tak menyurutkan semangatmu, BRAVO! Terimakasih untuk semua pihak yang sudah mendukung dan bekerja sama",
+            'image' => 'upacarapenurunanbendera.jpg',
             'category_id' => 1, // Foreign key to category
             'pendidikan_id' => 3, // Foreign key to pendidikan
             'tingkat_id' => 4, // Foreign key to tingkat
             'jenis_id' => 2 // Foreign key to jenis
         ],
 
-        6 => [
+        39 => [
             'title' => "TUAN RUMAH SOSIALISASI KMA 450 TAHUN 2024",
             'content' => "Sosialisasi KMA 450 Tahun 2024 bersama MA Al Hikmah Melathen dan MA Al Fattahiyah pada hari Senin, 12 Agustus 2024.",
             'image' => 'tuanrumakama2024.jpg',
@@ -89,16 +49,385 @@ $data = [
             'jenis_id' => 2 // Foreign key to jenis
         ],
 
-        7 => [
-            'title' => "UPACARA PENURUNAN BENDERA BERSEJARAH",
-            'content' => "Hari ini, untuk pertama kalinya MA Al Hidayah menyelenggarakan upacara penurunan bendera dalam rangka Peringatan HUT RI ke-79.
-            Panas terik tak menyurutkan semangatmu, BRAVO! Terimakasih untuk semua pihak yang sudah mendukung dan bekerja sama",
-            'image' => 'upacarapenurunanbendera.jpg',
+        38 => [
+            'title' => "KHOTMIL QUR'AN BIL HIFDHI",
+            'content' => "Alhamdulillah, selamat dan sukses untuk Muhammad Zidni Ilman Nafi'a bin Ahmad Hasyim. Semoga selalu Istiqomah, bermanfaat dan barokah ilmunya.",
+            'image' => 'khotmilquranbilhifdhi.jpg',
             'category_id' => 1, // Foreign key to category
             'pendidikan_id' => 3, // Foreign key to pendidikan
             'tingkat_id' => 4, // Foreign key to tingkat
             'jenis_id' => 2 // Foreign key to jenis
-        ]
+        ],
+
+        37 => [
+            'title' => "MASA TA'ARUF SISWA MADRASAH",
+            'content' => 'Informasi mengenai kegiatan belajar mengajar di sekolah.',
+            'image' => 'Header.jpg',
+            'category_id' => 1, // Foreign key to category
+            'pendidikan_id' => 3, // Foreign key to pendidikan
+            'tingkat_id' => 1, // Foreign key to tingkat
+            'jenis_id' => 2 // Foreign key to jenis
+        ],
+
+        36 => [
+            'title' => 'SILATURAHMI WALI SANTRI PUTRI',
+            'content' => 'Event olahraga yang diadakan bulan ini.',
+            'image' => 'silaturahmi.png',
+            'category_id' => 1, // Foreign key to category
+            'pendidikan_id' => 3, // Foreign key to pendidikan
+            'tingkat_id' => 2, // Foreign key to tingkat
+            'jenis_id' => 2 // Foreign key to jenis
+        ],
+
+        35 => [
+            'title' => 'JUARA 2 MATEMATIKA',
+            'content' => 'Event olahraga yang diadakan bulan ini.',
+            'image' => 'Prestasi Juara2 Matematika MA.jpg',
+            'category_id' => 2, // Foreign key to category
+            'pendidikan_id' => 3, // Foreign key to pendidikan
+            'tingkat_id' => 2, // Foreign key to tingkat
+            'jenis_id' => 1 // Foreign key to jenis
+        ],
+
+        34 => [
+            'title' => 'JUARA 2 EKONOMI MA',
+            'content' => 'Detail tentang workshop pendidikan yang akan diadakan.',
+            'image' => 'Prestasi Juara2 Ekonomi MA.jpg',
+            'category_id' => 2, // Foreign key to category
+            'pendidikan_id' => 3, // Foreign key to pendidikan
+            'tingkat_id' => 2, // Foreign key to tingkat
+            'jenis_id' => 1 // Foreign key to jenis
+        ],
+
+        33 => [
+            'title' => 'Penyuluhan Kesehatan oleh Puskesmas Kauman',
+            'content' => 'Penyuluhan Kesehatan oleh Puskesmas Kauman',
+            'image' => 'Prestasi Juara2 Ekonomi MA.jpg',
+            'category_id' => 2, // Foreign key to category
+            'pendidikan_id' => 3, // Foreign key to pendidikan
+            'tingkat_id' => 2, // Foreign key to tingkat
+            'jenis_id' => 2 // Foreign key to jenis
+        ],
+
+        32 => [
+            'title' => 'Selamat menempuh Penilaian Akhir Tahun',
+            'content' => 'Selamat menempuh Penilaian Akhir Tahun. Tahun Pelajaran 2023/2024. Semoga diberikan kelancaran dan kemudahan serta mendapat hasil yang baik serta memuaskan.',
+            'image' => 'Prestasi Juara2 Ekonomi MA.jpg',
+            'category_id' => 1, // Foreign key to category
+            'pendidikan_id' => 1, // Foreign key to pendidikan
+            'tingkat_id' => 2, // Foreign key to tingkat
+            'jenis_id' => 2 // Foreign key to jenis
+        ],
+
+        31 => [
+            'title' => 'HAFLAH TASYAKURAN PURNA SISWA KELAS XII',
+            'content' => 'Purna bukan berarti usai. Perjalanan mencari ilmu masih harus terus berlanjut. Semoga tetap Istiqomah dan semangat mencari Ilmu. Serta ingat jasa Gurumu',
+            'image' => 'tuanrumakama2024.jpg',
+            'category_id' => 1, // Foreign key to category
+            'pendidikan_id' => 1, // Foreign key to pendidikan
+            'tingkat_id' => 1, // Foreign key to tingkat
+            'jenis_id' => 2 // Foreign key to jenis
+        ],
+
+        30 => [
+            'title' => 'Pemilihan Ketua dan Wakil Ketua OSIS MA Al Hidayah Periode 2024/2025',
+            'content' => 'Pemilihan Ketua dan Wakil Ketua OSIS MA Al Hidayah Periode 2024/2025',
+            'image' => 'tuanrumakama2024.jpg',
+            'category_id' => 1, // Foreign key to category
+            'pendidikan_id' => 1, // Foreign key to pendidikan
+            'tingkat_id' => 1, // Foreign key to tingkat
+            'jenis_id' => 2 // Foreign key to jenis
+        ],
+
+        29 => [
+            'title' => 'KHOTMIL QURAN BIL HIFDHI',
+            'content' => "Alhamdulillah, selamat dan sukses untuk Imro'atul Khasanah. Semoga selalu Istiqomah, bermanfaat dan barokah ilmunya.",
+            'image' => 'tuanrumakama2024.jpg',
+            'category_id' => 1, // Foreign key to category
+            'pendidikan_id' => 1, // Foreign key to pendidikan
+            'tingkat_id' => 1, // Foreign key to tingkat
+            'jenis_id' => 2 // Foreign key to jenis
+        ],
+
+        28 => [
+            'title' => 'RAPAT PLENO KELULUSAN PESERTA DIDIK KELAS XII',
+            'content' => 'Rapat Pleno Kelulusan Peserta Didik Kelas XII, Angkatan I MA Al Hidayah Kauman Tahun Pelajaran 2023/2024. MA Al Hidayah Kauman menggelar rapat pleno kelulusan peserta didik kelas XII tahun Pelajaran 2023/2024 pada Kamis (02/05/2024). Rapat dilaksankan di Ruang Kelas Gedung Timur MA Al Hidayah yang dihadiri oleh jajaran struktural, para wali kelas dan seluruh dewan guru kelas XII. Rapat ini diawali dengan pengarahan dari Kepala MA Al Hidayah Kauman, Moh. Taufiq Hidayatulloh, S. Pd. Selanjutnya, ketentuan kelulusan disampaikan oleh Wakamad Bidang Kurikulum. Setelah melalui rapat pleno memutuskan secara bersama jumlah peserta didik yang dinyatakan lulus. Kelulusan peserta didik akan diumumkan pada tanggal 6 Mei 2024 mendatang. Semoga hasil terbaik didapatkan pada kegiatan ini. Kegiatan ini menjadi saksi keberhasilan dan perjuangan tak kenal lelah dari setiap peserta didik dan guru MA Al Hidayah Kauman, mendorong semangat untuk terus berkembang dan meraih prestasi di masa depan.',
+            'image' => 'tuanrumakama2024.jpg',
+            'category_id' => 1, // Foreign key to category
+            'pendidikan_id' => 1, // Foreign key to pendidikan
+            'tingkat_id' => 1, // Foreign key to tingkat
+            'jenis_id' => 2 // Foreign key to jenis
+        ],
+
+        27 => [
+            'title' => 'KHOTMIL QURAN BIL HIFDHI',
+            'content' => 'Alhamdulillah, selamat dan sukses untuk Ikvi Mafina Ibadati. Semoga selalu Istiqomah, bermanfaat dan barokah ilmunya.',
+            'image' => 'tuanrumakama2024.jpg',
+            'category_id' => 1, // Foreign key to category
+            'pendidikan_id' => 1, // Foreign key to pendidikan
+            'tingkat_id' => 1, // Foreign key to tingkat
+            'jenis_id' => 2 // Foreign key to jenis
+        ],
+
+        26 => [
+            'title' => 'KHOTMIL QURAN BIL HIFDHI',
+            'content' => 'Alhamdulillah, selamat dan sukses untuk Syifau Zzoelfa. Semoga selalu Istiqomah, bermanfaat dan barokah ilmunya.',
+            'image' => 'tuanrumakama2024.jpg',
+            'category_id' => 1, // Foreign key to category
+            'pendidikan_id' => 1, // Foreign key to pendidikan
+            'tingkat_id' => 1, // Foreign key to tingkat
+            'jenis_id' => 2 // Foreign key to jenis
+        ],
+
+        25 => [
+            'title' => 'KHOTMIL QURAN BIL HIFDHI',
+            'content' => 'Alhamdulillah, selamat dan sukses untuk Sartika Dita Wahyu Sejati. Semoga selalu Istiqomah, bermanfaat dan barokah ilmunya.',
+            'image' => 'tuanrumakama2024.jpg',
+            'category_id' => 1, // Foreign key to category
+            'pendidikan_id' => 1, // Foreign key to pendidikan
+            'tingkat_id' => 1, // Foreign key to tingkat
+            'jenis_id' => 2 // Foreign key to jenis
+        ],
+
+        24 => [
+            'title' => 'IDUL FITRI',
+            'content' => 'Segenap Keluarga Besar Madrasah Aliyah Al Hidayah mengucapkan, "Selamat Hari Raya Idul Fitri 1445 H" Semoga amal ibadah kita di bulan Ramadhan diterima oleh Allah SWT dan kita diberi kesempatan untuk berjumpa kembali dengan Ramadhan pada tahun mendatang aamiin aamin aamin yaa robbal alamiin',
+            'image' => 'tuanrumakama2024.jpg',
+            'category_id' => 1, // Foreign key to category
+            'pendidikan_id' => 1, // Foreign key to pendidikan
+            'tingkat_id' => 1, // Foreign key to tingkat
+            'jenis_id' => 2 // Foreign key to jenis
+        ],
+
+        23 => [
+            'title' => 'UJIAN PRAKTIK KELAS XII',
+            'content' => 'Ujian Praktik hari pertama putri kelas XII adalah senam lantai dan lari. Semoga diberi kelancaran dan kemudahan untuk ujian selanjutnya.',
+            'image' => 'tuanrumakama2024.jpg',
+            'category_id' => 1, // Foreign key to category
+            'pendidikan_id' => 1, // Foreign key to pendidikan
+            'tingkat_id' => 1, // Foreign key to tingkat
+            'jenis_id' => 2 // Foreign key to jenis
+        ],
+
+        22 => [
+            'title' => 'PPDB',
+            'content' => 'Highlight Seleksi PPDB MA AL HIDAYAH',
+            'image' => 'tuanrumakama2024.jpg',
+            'category_id' => 1, // Foreign key to category
+            'pendidikan_id' => 1, // Foreign key to pendidikan
+            'tingkat_id' => 1, // Foreign key to tingkat
+            'jenis_id' => 2 // Foreign key to jenis
+        ],
+
+        21 => [
+            'title' => 'PERPULANGAN SANTRI FORAML',
+            'content' => 'Perpulangan Santri Formal PPTQ AL-MANNAN Tulungagung Selamat Berlibur. Pastikan Dirumah Birrul Walidain ya... Jangan lupa mengaji dan juga pulang ke pondok sesui jadwal yang telah ditetapkan👌',
+            'image' => 'tuanrumakama2024.jpg',
+            'category_id' => 1, // Foreign key to category
+            'pendidikan_id' => 1, // Foreign key to pendidikan
+            'tingkat_id' => 1, // Foreign key to tingkat
+            'jenis_id' => 2 // Foreign key to jenis
+        ],
+
+        20 => [
+            'title' => 'PENILAIAN AKHIR SEMESTER',
+            'content' => 'Semoga diberi kelancaran dan kemudahan dalam mengerjakan serta mendapatkan hasil yang baik.',
+            'image' => 'tuanrumakama2024.jpg',
+            'category_id' => 1, // Foreign key to category
+            'pendidikan_id' => 1, // Foreign key to pendidikan
+            'tingkat_id' => 1, // Foreign key to tingkat
+            'jenis_id' => 2 // Foreign key to jenis
+        ],
+
+        19 => [
+            'title' => 'JUARA 1 BULU TANGKIS TUNGGAL PUTRI',
+            'content' => 'Selamat kepada Bu Tika atas prestasi yang diperoleh. Semoga kedepan makin sukses dan makin semangat meraih prestasi serta makin menginspirasi.',
+            'image' => 'tuanrumakama2024.jpg',
+            'category_id' => 1, // Foreign key to category
+            'pendidikan_id' => 1, // Foreign key to pendidikan
+            'tingkat_id' => 1, // Foreign key to tingkat
+            'jenis_id' => 1 // Foreign key to jenis
+        ],
+
+        18 => [
+            'title' => 'HARAPAN 3  SINGER',
+            'content' => 'Semoga kedepannya semakin sukses dan semakin semangat meraih prestasi. Terimakasih juga kami sampaikan kepada segenap pihak yang telah mendukung dengan semaksimal mungkin.',
+            'image' => 'tuanrumakama2024.jpg',
+            'category_id' => 1, // Foreign key to category
+            'pendidikan_id' => 1, // Foreign key to pendidikan
+            'tingkat_id' => 1, // Foreign key to tingkat
+            'jenis_id' => 1 // Foreign key to jenis
+        ],
+
+        17 => [
+            'title' => 'HARAPAN 1 SINGER',
+            'content' => 'Semoga kedepannya semakin sukses dan semakin semangat meraih prestasi. Terimakasih juga kami sampaikan kepada segenap pihak yang telah mendukung dengan semaksimal mungkin.',
+            'image' => 'tuanrumakama2024.jpg',
+            'category_id' => 1, // Foreign key to category
+            'pendidikan_id' => 1, // Foreign key to pendidikan
+            'tingkat_id' => 1, // Foreign key to tingkat
+            'jenis_id' => 2 // Foreign key to jenis
+        ],
+
+        16 => [
+            'title' => 'HARAPAN 3 KALIGRAFI',
+            'content' => 'Semoga kedepannya semakin sukses dan semakin semangat meraih prestasi. Terimakasih juga kami sampaikan kepada segenap pihak yang telah mendukung dengan semaksimal mungkin.',
+            'image' => 'tuanrumakama2024.jpg',
+            'category_id' => 1, // Foreign key to category
+            'pendidikan_id' => 1, // Foreign key to pendidikan
+            'tingkat_id' => 1, // Foreign key to tingkat
+            'jenis_id' => 1 // Foreign key to jenis
+        ],
+
+        15 => [
+            'title' => 'JUARA 1 MUSABAQOH FAHMIL QURAN',
+            'content' => 'Semoga kedepannya semakin sukses dan semakin semangat meraih prestasi. Terimakasih juga kami sampaikan kepada segenap pihak yang telah mendukung dengan semaksimal mungkin.',
+            'image' => 'tuanrumakama2024.jpg',
+            'category_id' => 1, // Foreign key to category
+            'pendidikan_id' => 1, // Foreign key to pendidikan
+            'tingkat_id' => 1, // Foreign key to tingkat
+            'jenis_id' => 1 // Foreign key to jenis
+        ],
+
+        14 => [
+            'title' => 'JUARA 2 CATUR',
+            'content' => 'Semoga kedepannya semakin sukses dan semakin semangat meraih prestasi. Terimakasih juga kami sampaikan kepada segenap pihak yang telah mendukung dengan semaksimal mungkin.',
+            'image' => 'tuanrumakama2024.jpg',
+            'category_id' => 1, // Foreign key to category
+            'pendidikan_id' => 1, // Foreign key to pendidikan
+            'tingkat_id' => 1, // Foreign key to tingkat
+            'jenis_id' => 1 // Foreign key to jenis
+        ],
+
+        13 => [
+            'title' => 'HARAPAN 2 CIPTA & BACA PUISI KANDUNGAN AL QURAN',
+            'content' => 'Semoga kedepannya semakin sukses dan semakin semangat meraih prestasi. Terimakasih juga kami sampaikan kepada segenap pihak yang telah mendukung dengan semaksimal mungkin.',
+            'image' => 'tuanrumakama2024.jpg',
+            'category_id' => 1, // Foreign key to category
+            'pendidikan_id' => 1, // Foreign key to pendidikan
+            'tingkat_id' => 1, // Foreign key to tingkat
+            'jenis_id' => 1 // Foreign key to jenis
+        ],
+
+        12 => [
+            'title' => 'JUARA TAHFIDZUL QURAN 10 JUZ',
+            'content' => 'Semoga kedepannya semakin sukses dan semakin semangat meraih prestasi. Terimakasih juga kami sampaikan kepada segenap pihak yang telah mendukung dengan semaksimal mungkin.',
+            'image' => 'tuanrumakama2024.jpg',
+            'category_id' => 1, // Foreign key to category
+            'pendidikan_id' => 1, // Foreign key to pendidikan
+            'tingkat_id' => 1, // Foreign key to tingkat
+            'jenis_id' => 1 // Foreign key to jenis
+        ],
+
+        11 => [
+            'title' => 'STUDY BANDING',
+            'content' => 'Study Banding Keluarga Besar Yayasan Al-Mannan Ke Ponpes Assalafiyyah Mlangi Serta Ziaroh Maqbaroh KH. Nur Iman (Mlangi, Nogotirto, Kec. Gamping Kab. Sleman DIY)',
+            'image' => 'tuanrumakama2024.jpg',
+            'category_id' => 1, // Foreign key to category
+            'pendidikan_id' => 1, // Foreign key to pendidikan
+            'tingkat_id' => 1, // Foreign key to tingkat
+            'jenis_id' => 2 // Foreign key to jenis
+        ],
+
+        10 => [
+            'title' => 'ZIARAH MAKAM',
+            'content' => 'Ziarah Maqbaroh KH. Nur Iman Mlangi, Nogotirto Kec. Gamping Kab. Sleman DIY',
+            'image' => 'tuanrumakama2024.jpg',
+            'category_id' => 1, // Foreign key to category
+            'pendidikan_id' => 1, // Foreign key to pendidikan
+            'tingkat_id' => 1, // Foreign key to tingkat
+            'jenis_id' => 2 // Foreign key to jenis
+        ],
+
+        9 => [
+            'title' => 'JUARA 4 MA/SMA BIOLOGI TERINTEGRASI',
+            'content' => 'Selamat dan Sukses atas prestasi yang diraih',
+            'image' => 'tuanrumakama2024.jpg',
+            'category_id' => 1, // Foreign key to category
+            'pendidikan_id' => 1, // Foreign key to pendidikan
+            'tingkat_id' => 1, // Foreign key to tingkat
+            'jenis_id' => 1 // Foreign key to jenis
+        ],
+
+        8 => [
+            'title' => 'STUDHY BANDING',
+            'content' => 'Study banding Keluarga Besar Yayasan Al Mannan di Ponpes Assalafiyyah Mlangi Selasa, 11 Juli 2023',
+            'image' => 'tuanrumakama2024.jpg',
+            'category_id' => 1, // Foreign key to category
+            'pendidikan_id' => 1, // Foreign key to pendidikan
+            'tingkat_id' => 1, // Foreign key to tingkat
+            'jenis_id' => 2 // Foreign key to jenis
+        ],
+
+        7 => [
+            'title' => 'BAZAR',
+            'content' => 'Karena dalam membangun usaha tidaklah semudah membalik telapak tangan, maka perlu diajarkan sejak di bangku sekolahan.',
+            'image' => 'tuanrumakama2024.jpg',
+            'category_id' => 1, // Foreign key to category
+            'pendidikan_id' => 1, // Foreign key to pendidikan
+            'tingkat_id' => 1, // Foreign key to tingkat
+            'jenis_id' => 2 // Foreign key to jenis
+        ],
+        
+        6 => [
+            'title' => 'PENILAIAN AKHIR TAHUN TA 2022/2023',
+            'content' => 'Semoga diberi kemudahan dan kelancaran dalam mengerjakan serta mendapat hasil yang memuaskan.',
+            'image' => 'tuanrumakama2024.jpg',
+            'category_id' => 1, // Foreign key to category
+            'pendidikan_id' => 1, // Foreign key to pendidikan
+            'tingkat_id' => 1, // Foreign key to tingkat
+            'jenis_id' => 2 // Foreign key to jenis
+        ],
+
+        5 => [
+            'title' => 'APEL HARI NASIONAL 2023',
+            'content' => 'Apel Peringatan Hari Pendidikan Nasional 2023 dilanjutkan dengan Halal Bi Halal SMPT dan MA Al Hidayah pada Selasa, 2 Mei 2023',
+            'image' => 'tuanrumakama2024.jpg',
+            'category_id' => 1, // Foreign key to category
+            'pendidikan_id' => 1, // Foreign key to pendidikan
+            'tingkat_id' => 1, // Foreign key to tingkat
+            'jenis_id' => 2 // Foreign key to jenis
+        ],
+
+        4 => [
+            'title' => 'PPDB',
+            'content' => 'PPDB',
+            'image' => 'tuanrumakama2024.jpg',
+            'category_id' => 1, // Foreign key to category
+            'pendidikan_id' => 1, // Foreign key to pendidikan
+            'tingkat_id' => 1, // Foreign key to tingkat
+            'jenis_id' => 2 // Foreign key to jenis
+        ],
+
+        3 => [
+            'title' => 'LOWONGAN TENAGA PENDIDIK',
+            'content' => '"RALAT TANGGAL PENDAFTARAN" Tanggal pendaftaran yang benar adalah 13-25 Maret 2023 Segera kirim lamaranmu dan bergabung bersama kami',
+            'image' => 'tuanrumakama2024.jpg',
+            'category_id' => 1, // Foreign key to category
+            'pendidikan_id' => 1, // Foreign key to pendidikan
+            'tingkat_id' => 1, // Foreign key to tingkat
+            'jenis_id' => 2 // Foreign key to jenis
+        ],
+
+        2 => [
+            'title' => 'NATSANA',
+            'content' => 'MATSAMA "Moderasi Beragama di Madrasah Mewujudkan Santri yang Tangguh dalam Mengemban Al Quran."',
+            'image' => 'tuanrumakama2024.jpg',
+            'category_id' => 1, // Foreign key to category
+            'pendidikan_id' => 1, // Foreign key to pendidikan
+            'tingkat_id' => 1, // Foreign key to tingkat
+            'jenis_id' => 2 // Foreign key to jenis
+        ],
+
+        1 => [
+            'title' => 'TURUT BERDUKA',
+            'content' => 'Turut berbelasungkawa atas wafatnya asatidzah "MARLYNDA AGASTIN, S.Pd." Semoga Husnul Khotimah dan Seluruh Amal Ibadah Diterima serta Pengabdian dan Perjuangan Beliau.Al Fatihah...',
+            'image' => 'tuanrumakama2024.jpg',
+            'category_id' => 1, // Foreign key to category
+            'pendidikan_id' => 1, // Foreign key to pendidikan
+            'tingkat_id' => 1, // Foreign key to tingkat
+            'jenis_id' => 2 // Foreign key to jenis
+        ],
     ]
 ];
 
@@ -132,6 +461,18 @@ function filterByCategory($data, $category_id) {
 function sortByIdDesc($data) {
     $posts = $data['post'];
     krsort($posts);
+    
+    $sorted_posts = [];
+    foreach ($posts as $id => $post) {
+        $sorted_posts[] = array_merge(['id' => $id], $post);
+    }
+    return $sorted_posts;
+}
+
+// Method untuk menyortir post berdasarkan ID dari terkecil ke terbesar
+function sortByIdAsc($data) {
+    $posts = $data['post'];
+    ksort($posts);
     
     $sorted_posts = [];
     foreach ($posts as $id => $post) {
@@ -179,7 +520,7 @@ function filterByTingkat($data, $tingkat_id) {
 }
 
 // Method untuk mendapatkan post terbaru
-function getRecentPosts($data, $limit = 5) {
+function getRecentPostsLimits($data, $limit = 5) {
     $sorted_posts = sortByIdDesc($data);
     return array_slice($sorted_posts, 0, $limit);
 }

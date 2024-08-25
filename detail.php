@@ -50,7 +50,7 @@ if (!$post) {
       </div>
       <div class="row pt-4">
         <?php 
-        $recent_posts = getRecentPosts($data);
+        $recent_posts = getRecentPostsLimits($data, 2);
         if (!empty($recent_posts)): 
           foreach ($recent_posts as $recent_post): ?>
           <div class="card pt-3 mb-5 bg-light" style="width: 18rem">

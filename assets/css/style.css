@@ -426,8 +426,29 @@ main.main{
 	padding-bottom: 1em;
 }
 
-.carousel img{
-	width: auto;
-	max-width: 100%;
-	display: block;
+.carousel-image {
+	height: 500px;
+	object-fit: cover;
+	object-position: center;
+}
+
+.carousel-caption {
+	background: rgba(0, 0, 0, 0.5);
+	padding: 10px;
+	border-radius: 5px;
+}
+
+.post-category .badge {
+	font-size: 0.9em;
+	font-weight: bold;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+	filter: invert(1);
+}
+
+.header-main a {
+	text-decoration: none;
+	color: inherit;
 }
