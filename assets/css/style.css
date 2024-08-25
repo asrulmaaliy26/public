@@ -424,12 +424,6 @@ a:hover, a:focus, a:active{
 	object-position: center;
 }
 
-.carousel-caption {
-	background: rgba(0, 0, 0, 0.5);
-	padding: 10px;
-	border-radius: 5px;
-}
-
 .post-category .badge {
 	font-size: 0.9em;
 	font-weight: bold;

@@ -24,7 +24,7 @@ $media_url = 'assets/images/'
                     <a href="detail.php?id=1">
                         <img src="assets/images/Header.jpg" class="d-block w-100 carousel-image" alt="Post Title 1">
                     </a>
-                    <div class="carousel-caption d-none d-md-block">
+                    <div class="carousel-caption d-none d-md-block" style="background: rgba(0, 0, 0, 0.5); padding: 10px;	border-radius: 5px;">
                         <div class="post-category">
                             <a href="detail.php?id=1" class="badge badge-primary">ERANDA</a>
                         </div>
