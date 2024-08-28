@@ -5,8 +5,23 @@ include 'data.php';
 // Mengambil ID dari URL
 $post_id = isset($_GET['id']) ? intval($_GET['id']) : null;
 
-// Mendapatkan post berdasarkan ID
-$post = $post_id ? getPostById($data, $post_id) : null;
+// Memeriksa apakah post_id ada
+if (!$post_id) {
+    echo "<p>ID tidak ditemukan.</p>";
+    include 'footer.php';
+    exit();
+}
+
+try {
+    // Mengambil artikel berdasarkan ID
+    $post = $controller->getOneArticle($post_id);
+    $articlesPaginasi = $controller->getArticlesPaginasi(3);
+} catch (\Exception $e) {
+    $error_message = 'Error: ' . htmlspecialchars($e->getMessage(), ENT_QUOTES, 'UTF-8');
+    echo "<p>{$error_message}</p>";
+    include 'footer.php';
+    exit();
+}
 
 if (!$post) {
     echo "<p>Post tidak ditemukan.</p>";
@@ -16,7 +31,7 @@ if (!$post) {
 ?>
 
 <section style="position: relative; text-align: center;">
-    <img width="100%" style="height: 500px;object-fit: cover;filter: brightness(50%);" src="assets/images/<?php echo $post['image']; ?>" alt="">
+    <img width="100%" style="height: 500px;object-fit: cover;filter: brightness(50%);" src="<?php echo htmlspecialchars($post['article_image'], ENT_QUOTES, 'UTF-8'); ?>" alt="">
 </section>
 
 <div class="container">
@@ -24,21 +39,13 @@ if (!$post) {
     <div class="col-sm-9">
       <section>
         <div class="container pt-5 pb-5 j1" style="max-width: 800px; margin: auto">
-          <h4 class="text-center pt-5"><?php echo $post['title']; ?></h4>
-          <p class="text-center text-muted mb-5"><em><?php echo date('F j, Y'); ?></em></p>
-          <img class="mb-5" style="width: 80%; border-radius: 10px; display: block; margin: auto" src="assets/images/<?php echo $post['image']; ?>" alt="<?php echo $post['title']; ?>" />
-          <p><?php echo $post['content']; ?></p>
-          
-          <?php if (!empty($post['link'])): ?>
-          <p class="text-left mt-5">
-            <a href="<?php echo $post['link']; ?>" class="text-muted" style="text-decoration: none;">
-              <iframe style="padding: 20px;" width="80%" height="315" src="<?php echo $post['link']; ?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </a>
-          </p>
-          <?php endif; ?>
+          <h4 class="text-center pt-5"><?php echo htmlspecialchars($post['article_title'], ENT_QUOTES, 'UTF-8'); ?></h4>
+          <p class="text-center text-muted mb-5"><em><?php echo date('F j, Y', strtotime($post['created_at'] ?? 'now')); ?></em></p>
+          <img class="mb-5" style="width: 80%; border-radius: 10px; display: block; margin: auto" src="<?php echo htmlspecialchars($post['article_image'], ENT_QUOTES, 'UTF-8'); ?>" alt="<?php echo htmlspecialchars($post['article_title'], ENT_QUOTES, 'UTF-8'); ?>" />
+          <p><?php echo $post['article_content']; ?></p>
           
           <p class="text-center text-muted mt-5">
-            <em><?php echo date('F j, Y'); ?> | By: <?php echo !empty($post['author']) ? $post['author'] : '-'; ?></em>
+            <em><?php echo date('F j, Y', strtotime($post['created_at'] ?? 'now')); ?> | By: <?php echo !empty($post['article_author']) ? htmlspecialchars($post['article_author'], ENT_QUOTES, 'UTF-8') : '-'; ?></em>
           </p>
         </div>
       </section>
@@ -49,25 +56,22 @@ if (!$post) {
         <h2>Berita Terbaru</h2>
       </div>
       <div class="row pt-4">
-        <?php 
-        $recent_posts = getRecentPostsLimits($data, 2);
-        if (!empty($recent_posts)): 
-          foreach ($recent_posts as $recent_post): ?>
+        <?php if (!empty($articlesPaginasi)): ?>
+          <?php foreach ($articlesPaginasi as $article): ?>
           <div class="card pt-3 mb-5 bg-light" style="width: 18rem">
-            <a href="detail.php?id=<?php echo $recent_post['id']; ?>" class="text-decoration-none text-dark">
-              <img class="card-img-top" src="assets/images/<?php echo $recent_post['image']; ?>" alt="<?php echo $recent_post['title']; ?>" />
+            <a href="detail.php?id=<?php echo htmlspecialchars($article['article_id'], ENT_QUOTES, 'UTF-8'); ?>" class="text-decoration-none text-dark">
+              <img class="card-img-top" src="<?php echo htmlspecialchars($article['article_image'], ENT_QUOTES, 'UTF-8'); ?>" alt="<?php echo htmlspecialchars($article['article_title'], ENT_QUOTES, 'UTF-8'); ?>" />
             </a>
             <div class="card-body">
-              <h5 class="card-title"><?php echo $recent_post['title']; ?></h5>
+              <h5 class="card-title"><?php echo htmlspecialchars($article['article_title'], ENT_QUOTES, 'UTF-8'); ?></h5>
               <p class="card-text">
-                <?php echo substr($recent_post['content'], 0, 50) . '...'; ?>
+                <?php echo truncateText($article['article_content'], 50); ?>
               </p>
             </div>
           </div>
-        <?php 
-          endforeach;
-        else: ?>
-        <p>No recent posts available.</p>
+          <?php endforeach; ?>
+        <?php else: ?>
+          <p>No articles found.</p>
         <?php endif; ?>
       </div>
     </div>

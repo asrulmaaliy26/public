@@ -1,6 +1,6 @@
 <?php 
 include 'base.php'; 
-include 'data.php';
+require 'data.php';
 
 // Menentukan jumlah post per halaman
 $posts_per_page = 5;
@@ -12,16 +12,24 @@ $current_page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
 $offset = ($current_page - 1) * $posts_per_page;
 
 // Mendapatkan semua post dan menyortirnya secara ascending berdasarkan ID
-$all_posts = sortByIdDesc($data);
+$articlesMA = $controller->getArticleByOneTypes('pendidikan', '3');
 
 // Mendapatkan jumlah total post
-$total_posts = count($all_posts);
+$total_posts = count($articlesMA);
 
 // Memotong array berdasarkan halaman yang aktif
-$posts_on_current_page = array_slice($all_posts, $offset, $posts_per_page);
+$posts_on_current_page = array_slice($articlesMA, $offset, $posts_per_page);
 
 // Menghitung jumlah halaman yang diperlukan
 $total_pages = ceil($total_posts / $posts_per_page);
+
+// Mendapatkan artikel terbaru (hanya 3 artikel)
+$articlesMApaginasi = array_slice($articlesMA, 0, 3);
+
+// Fungsi untuk memotong teks
+function truncateContent($text, $maxLength) {
+    return strlen($text) > $maxLength ? substr($text, 0, $maxLength) . '...' : $text;
+}
 ?>
 
 <section style="position: relative; text-align: center;">
@@ -36,32 +44,32 @@ $total_pages = ceil($total_posts / $posts_per_page);
         <div class="col-sm-9">
             <section class="mx-5">
                 <div class="container pb-5 j1" style="max-width: 800px; margin: auto;">
-                    <?php 
-                    if ($posts_on_current_page) {
-                        foreach ($posts_on_current_page as $post) { 
-                    ?>
-                    <a href="detail.php?id=<?php echo $post['id']; ?>" class="text-decoration-none text-dark">
-                        <h4 class="text-center pt-5 "><?php echo $post['title']; ?></h4>
+                <?php if (isset($error_message)): ?>
+                    <p><?php echo htmlspecialchars($error_message, ENT_QUOTES, 'UTF-8'); ?></p>
+                <?php else: ?>
+                    <?php endif; ?>
+                <?php if (isset($posts_on_current_page['error'])): ?>
+                    <p><?php echo htmlspecialchars($posts_on_current_page['error'], ENT_QUOTES, 'UTF-8'); ?></p>
+                <?php elseif (!empty($posts_on_current_page)): ?>
+                    <?php foreach ($posts_on_current_page as $post): ?>
+                    <a href="detail.php?id=<?php echo $post['article_id']; ?>" class="text-decoration-none text-dark">
+                        <h4 class="text-center pt-5 "><?php echo htmlspecialchars($post['article_title'], ENT_QUOTES, 'UTF-8'); ?></h4>
                         <div class="row border-bottom border-dark">
                             <div class="col-md-6 mb-4">
                                 <p class="mt-4">
-                                    <?php echo truncateContent($post['content'], 50); ?>
+                                    <?php echo truncateContent(htmlspecialchars($post['article_content'], ENT_QUOTES, 'UTF-8'), 50); ?>
                                 </p>
                             </div>
                             <div class="col-md-6">
-                                <img style="width: 100%; max-height: 200px; object-fit: cover; border-radius: 10px;" src="assets/images/<?php echo $post['image']; ?>" alt="<?php echo $post['title']; ?>" />
+                                <img style="width: 100%; max-height: 200px; object-fit: cover; border-radius: 10px;" src="<?php echo htmlspecialchars($post['article_image'], ENT_QUOTES, 'UTF-8'); ?>" alt="<?php echo htmlspecialchars($post['article_title'], ENT_QUOTES, 'UTF-8'); ?>" />
                                 <p class="text-center text-muted mt-5"><em>End: 2024 | By: Admin</em></p>
                             </div>
                         </div>
                     </a>
-                    <?php 
-                        } 
-                    } else { 
-                    ?>
-                    <p>No recent posts available.</p>
-                    <?php 
-                    } 
-                    ?>
+                <?php endforeach; ?>
+                <?php else: ?>
+                    <p>No articles found.</p>
+                <?php endif; ?>
                 </div>
 
                 <!-- Pagination Controls -->
@@ -98,32 +106,27 @@ $total_pages = ceil($total_posts / $posts_per_page);
                 <h2>Berita Terbaru</h2>
             </div>
             <div class="row pt-4">
-                <?php 
-                $penting_posts = filterByCategoryKegiatan($data);
-                $counter = 0; // Inisialisasi counter
-
-                if ($penting_posts) {
-                    foreach ($penting_posts as $post) { 
-                        if ($counter >= 3) break; // Batasi hingga 3 item
-                ?>
+            <?php if (isset($error_message)): ?>
+                    <p><?php echo htmlspecialchars($error_message, ENT_QUOTES, 'UTF-8'); ?></p>
+                <?php else: ?>
+                    <?php endif; ?>
+                <?php if (isset($articlesMApaginasi['error'])): ?>
+                    <p><?php echo htmlspecialchars($articlesMApaginasi['error'], ENT_QUOTES, 'UTF-8'); ?></p>
+                <?php elseif (!empty($articlesMApaginasi)): ?>
+                    <?php foreach ($articlesMApaginasi as $post): ?>
                 <div class="card pt-3 mb-4 bg-light" style="width: 18rem">
-                    <a href="detail.php?id=<?php echo $post['id']; ?>" class="text-decoration-none text-dark">
-                        <img style="width: 100%; max-height: 200px; object-fit: cover; border-radius: 10px;" class="card-img-top" src="assets/images/<?php echo $post['image']; ?>" alt="<?php echo $post['title']; ?>" />
+                    <a href="detail.php?id=<?php echo $post['article_id']; ?>" class="text-decoration-none text-dark">
+                        <img style="width: 100%; max-height: 200px; object-fit: cover; border-radius: 10px;" class="card-img-top" src="<?php echo htmlspecialchars($post['article_image'], ENT_QUOTES, 'UTF-8'); ?>" alt="<?php echo htmlspecialchars($post['article_title'], ENT_QUOTES, 'UTF-8'); ?>" />
                     </a>
                     <div class="card-body">
-                        <h5 class="card-title"><?php echo $post['title']; ?></h5>
-                        <p class="card-text"><?php echo truncateContent($post['content'], 20); ?></p>
+                        <h5 class="card-title"><?php echo htmlspecialchars($post['article_title'], ENT_QUOTES, 'UTF-8'); ?></h5>
+                        <p class="card-text"><?php echo truncateContent(htmlspecialchars($post['article_content'], ENT_QUOTES, 'UTF-8'), 20); ?></p>
                     </div>
                 </div>
-                <?php 
-                        $counter++; // Tambahkan counter setiap kali loop berjalan
-                    } 
-                } else { 
-                ?>
-                <p>Tidak ada pengumuman penting</p>
-                <?php 
-                } 
-                ?>
+                <?php endforeach; ?>
+                <?php else: ?>
+                    <p>No articles found.</p>
+                <?php endif; ?>
             </div>
         </div>
     </div>

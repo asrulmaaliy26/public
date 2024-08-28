@@ -4,18 +4,14 @@ include 'base.php';
 
 require 'data.php';
 
-$sorted_posts = sortByIdDesc($data);
-$filtered_by_kegiatan = filterByCategoryKegiatan($data);
-$filtered_by_jenis = filterByJenis($data, 2);
-$filtered_by_tingkat = filterByTingkat($data, 1);
-$filtered_by_jenis_and_tingkat = filterByJenisAndTingkat($data, 2, 1);
+$articlesPaginasi = $controller->getArticlesPaginasi(3); // Misalnya, mengambil halaman 1
+$articlesPaginasi4 = $controller->getArticlesPaginasi(4);
 
 $media_url = 'assets/images/' 
 
 ?>
 
 
-<!-- hot-post -->
 <div class="hot-post">
     <div class="post post-thumb">
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -154,31 +150,38 @@ $media_url = 'assets/images/'
     </div>
 </div>
 <!-- akhir sec 2 -->
-
 <!-- info -->
 <div class="container-fluid">
     <div class="container my-5 py-5 bg-light">
         <div class="row">
             <h4 class="text-center mb-5">SOROTAN</h4>
-            <?php $limited_sorted_posts = array_slice($sorted_posts, 0, 3); // Membatasi hingga 3 data
-            foreach ($limited_sorted_posts as $post): ?>
-                <div class="col-md-4 my-2 d-flex justify-content-center">
-                    <div class="card" style="width: 18rem;"
-                    >
-                        <p class="text-bg-success text-center"><?= $post['title'] ?></p>
-                        <img class="post-img" style="height: 350px; object-fit: cover; width: 100%;" src="<?= $media_url . $post['image'] ?>" alt="Card image cap">
-                        <a href="detail.php?id=<?= $post['id'] ?>" class="text-decoration-none text-dark">
-                            <div class="card-body text-center">
-                                <button style="background-color: #88D66C; border:none; width: 200px;" type="button" class="btn btn-custom justify-content-center mt-4 mb-4">Lihat Postingan</button>
+
+            <?php if (isset($error_message)): ?>
+                <p><?php echo htmlspecialchars($error_message, ENT_QUOTES, 'UTF-8'); ?></p>
+            <?php else: ?>
+                <?php if (!empty($articlesPaginasi)): ?>
+                    <?php foreach ($articlesPaginasi as $post): ?>
+                        <div class="col-md-4 my-2 d-flex justify-content-center">
+                            <div class="card" style="width: 18rem;">
+                                <p class="text-bg-success text-center"><?php echo htmlspecialchars($post['article_title'], ENT_QUOTES, 'UTF-8'); ?></p>
+                                <img class="post-img" style="height: 350px; object-fit: cover; width: 100%;" src="<?php echo htmlspecialchars($post['article_image'], ENT_QUOTES, 'UTF-8'); ?>" alt="Card image cap">
+                                <a href="detail.php?id=<?php echo htmlspecialchars($post['article_id'], ENT_QUOTES, 'UTF-8'); ?>" class="text-decoration-none text-dark">
+                                    <div class="card-body text-center">
+                                        <button style="background-color: #88D66C; border:none; width: 200px;" type="button" class="btn btn-custom justify-content-center mt-4 mb-4">Lihat Postingan</button>
+                                    </div>
+                                </a>
                             </div>
-                        </a>
-                    </div>
-                </div>
-            <?php endforeach; ?>
+                        </div>
+                    <?php endforeach; ?>
+                <?php else: ?>
+                    <p>No articles found.</p>
+                <?php endif; ?>
+            <?php endif; ?>
         </div>
     </div>
 </div>
 <!-- akhir info -->
+
 
 
 <!-- featured-posts -->
@@ -192,18 +195,20 @@ $media_url = 'assets/images/'
             </div>
         </div>
         <div class="row">
-            <!-- Example Static Data for Featured Posts -->
-            <?php $limited_sorted_posts = array_slice($sorted_posts, 0, 4); // Membatasi hingga 3 data
-            foreach ($limited_sorted_posts as $post): ?>
+            <?php if (isset($error_message)): ?>
+                <p><?php echo htmlspecialchars($error_message, ENT_QUOTES, 'UTF-8'); ?></p>
+            <?php else: ?>
+                <?php if (!empty($articlesPaginasi4)): ?>
+                    <?php foreach ($articlesPaginasi4 as $post): ?>
             <div class="col-md-3 col-sm-6">
                 <div class="post post-thumb">
                     <a href="detail.php?id=1" class="text-decoration-none text-dark post-img">
-                        <img src="<?= $media_url . $post['image'] ?>" alt="Post Image 1">
+                        <img src="<?= $post['article_image'] ?>" alt="Post Image 1">
                     </a>
                     <div class="post-body">
                         <h3 class="post-title">
-                            <a href="detail.php?id=<?= $post['id'] ?>" class="text-decoration-none text-dark">
-                                <?= $post['title'] ?>
+                            <a href="detail.php?id=<?= $post['article_id'] ?>" class="text-decoration-none text-dark">
+                                <?= $post['article_title'] ?>
                             </a>
                         </h3>
                         <ul class="post-meta">
@@ -219,7 +224,10 @@ $media_url = 'assets/images/'
             </div>
             
             <?php endforeach; ?>
-            <!-- sdf -->
+                <?php else: ?>
+                    <p>No articles found.</p>
+                <?php endif; ?>
+            <?php endif; ?>
         </div>
     </div>
 </div>
