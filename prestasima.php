@@ -143,7 +143,7 @@ $articlesMApaginasi = array_slice($articlesMApaginasi, 0, 2);
                                 <img class="card-img-top" src="<?php echo htmlspecialchars($post['article_image'], ENT_QUOTES, 'UTF-8'); ?>" alt="Card image cap">
                                 <div class="card-body">
                                     <h5 class="card-title"><?php echo htmlspecialchars($post['article_title'], ENT_QUOTES, 'UTF-8'); ?></h5>
-                                    <p class="card-text"><?php echo mb_strimwidth(htmlspecialchars($post['article_content'], ENT_QUOTES, 'UTF-8'), 0, 50, "..."); ?></p>
+                                    <p class="card-text"><?php echo mb_strimwidth($post['article_content'], 0, 50, "..."); ?></p>
                                 </div>
                             </div>
                         </a>

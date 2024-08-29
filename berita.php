@@ -55,14 +55,14 @@ function truncateContent($text, $maxLength) {
                     <a href="detail.php?id=<?php echo $post['article_id']; ?>" class="text-decoration-none text-dark">
                         <h4 class="text-center pt-5 "><?php echo htmlspecialchars($post['article_title'], ENT_QUOTES, 'UTF-8'); ?></h4>
                         <div class="row border-bottom border-dark">
-                            <div class="col-md-6 mb-4">
-                                <p class="mt-4">
-                                    <?php echo truncateContent(htmlspecialchars($post['article_content'], ENT_QUOTES, 'UTF-8'), 50); ?>
-                                </p>
-                            </div>
                             <div class="col-md-6">
                                 <img style="width: 100%; max-height: 200px; object-fit: cover; border-radius: 10px;" src="<?php echo htmlspecialchars($post['article_image'], ENT_QUOTES, 'UTF-8'); ?>" alt="<?php echo htmlspecialchars($post['article_title'], ENT_QUOTES, 'UTF-8'); ?>" />
-                                <p class="text-center text-muted mt-5"><em>End: 2024 | By: Admin</em></p>
+                                <p class="text-center text-muted mt-5"><em><?php echo date('F j, Y', strtotime($post['created_at'] ?? 'now')); ?> | By: Admin</em></p>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <p class="mt-4">
+                                    <?php echo truncateContent($post['article_content'], 50); ?>
+                                </p>
                             </div>
                         </div>
                     </a>
@@ -120,7 +120,7 @@ function truncateContent($text, $maxLength) {
                     </a>
                     <div class="card-body">
                         <h5 class="card-title"><?php echo htmlspecialchars($post['article_title'], ENT_QUOTES, 'UTF-8'); ?></h5>
-                        <p class="card-text"><?php echo truncateContent(htmlspecialchars($post['article_content'], ENT_QUOTES, 'UTF-8'), 20); ?></p>
+                        <p class="card-text"><?php echo truncateContent($post['article_content'], 20); ?></p>
                     </div>
                 </div>
                 <?php endforeach; ?>
