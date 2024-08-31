@@ -97,7 +97,7 @@ $media_url = 'assets/images/'
                 <i class="fas fa-chalkboard-teacher"></i>
             </div>
             
-            <div class="stat-number">35</div>
+            <div class="stat-number">28</div>
             <div class="stat-description">Pendidik & Tenaga Kependidikan</div>
             </div>
         </div>
@@ -124,8 +124,8 @@ $media_url = 'assets/images/'
             <div class="stat-icon">
                 <i class="fas fa-clipboard-list"></i>
             </div>
-            <div class="stat-number">0</div>
-            <div class="stat-description">Pendaftar Calon Peserta Didik</div>
+            <div class="stat-number">400</div>
+            <div class="stat-description">Total Peserta Didik</div>
             </div>
         </div>
         </div>

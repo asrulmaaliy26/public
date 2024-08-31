@@ -57,7 +57,7 @@ function truncateContent($text, $maxLength) {
                         <div class="row border-bottom border-dark">
                             <div class="col-md-6">
                                 <img style="width: 100%; max-height: 200px; object-fit: cover; border-radius: 10px;" src="<?php echo htmlspecialchars($post['article_image'], ENT_QUOTES, 'UTF-8'); ?>" alt="<?php echo htmlspecialchars($post['article_title'], ENT_QUOTES, 'UTF-8'); ?>" />
-                                <p class="text-center text-muted mt-5"><em><?php echo date('F j, Y', strtotime($post['created_at'] ?? 'now')); ?> | By: Admin</em></p>
+                                <p class="text-center text-muted mt-5"><em><?php echo date('F j, Y', strtotime($post['created_at'] ?? 'now')); ?></em></p>
                             </div>
                             <div class="col-md-6 mb-4">
                                 <p class="mt-4">
