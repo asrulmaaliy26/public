@@ -17,15 +17,15 @@ $media_url = 'assets/images/'
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <a href="detail.php?id=1">
+                    <a href="detail.php?id=38">
                         <img src="assets/images/Header.jpg" class="d-block w-100 carousel-image" alt="Post Title 1" style="height: 500px;	object-fit: cover;	object-position: center;">
                     </a>
                     <div class="carousel-caption d-none d-md-block" style="background: rgba(0, 0, 0, 0.5); padding: 10px;	border-radius: 5px;">
                         <div class="post-category">
-                            <a href="detail.php?id=1" class="badge badge-primary">ERANDA</a>
+                            <a href="detail.php?id=38" class="badge badge-primary">BERANDA</a>
                         </div>
                         <h3 class="post-title title-lg">
-                            <a href="detail.php?id=1" class="text-light">MASA TA'ARUF SISWA MADRASAH</a>
+                            <a href="detail.php?id=38" class="text-light">MASA TA'ARUF SISWA MADRASAH</a>
                         </h3>
                         <ul class="post-meta">
                             <li><a href="about.html" class="text-light">officialmaalhidayah</a></li>
@@ -35,15 +35,15 @@ $media_url = 'assets/images/'
                 </div>
 
                 <div class="carousel-item">
-                    <a href="detail.php?id=2">
-                        <img src="assets/images/Header.jpg" class="d-block w-100 carousel-image" alt="Post Title 2" style="height: 500px;	object-fit: cover;	object-position: center;">
+                    <a href="detail.php?id=40">
+                        <img src="https://admin.maalhidayahkauman.sch.id/uploads/articleimage/tuan-rumah-sosialisasi-kma-450-tahun-2024_20240827_163748.jpg?page=index.php" class="d-block w-100 carousel-image" alt="Post Title 2" style="height: 500px;	object-fit: cover;	object-position: center;">
                     </a>
                     <div class="carousel-caption d-none d-md-block" style="background: rgba(0, 0, 0, 0.5); padding: 10px;	border-radius: 5px;">
                         <div class="post-category">
-                            <a href="detail.php?id=2" class="badge badge-primary">BERANDA</a>
+                            <a href="detail.php?id=40" class="badge badge-primary">TRENDING</a>
                         </div>
                         <h3 class="post-title title-lg">
-                            <a href="detail.php?id=2" class="text-light">MASA TA'ARUF SISWA MADRASAH</a>
+                            <a href="detail.php?id=40" class="text-light">TUAN RUMAH SOSIALISASI KMA 450 TAHUN 2024</a>
                         </h3>
                         <ul class="post-meta">
                             <li><a href="about.html" class="text-light">officialmaalhidayah</a></li>
