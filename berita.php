@@ -54,14 +54,16 @@ function truncateContent($text, $maxLength) {
                     <?php foreach ($posts_on_current_page as $post): ?>
                     <a href="detail.php?id=<?php echo $post['article_id']; ?>" class="text-decoration-none text-dark">
                         <h4 class="text-center pt-5 "><?php echo htmlspecialchars($post['article_title'], ENT_QUOTES, 'UTF-8'); ?></h4>
-                        <div class="row border-bottom border-dark">
+                        <div class="row border-bottom border-dark mb">
                             <div class="col-md-6">
                                 <img style="width: 100%; max-height: 200px; object-fit: cover; border-radius: 10px;" src="<?php echo htmlspecialchars($post['article_image'], ENT_QUOTES, 'UTF-8'); ?>" alt="<?php echo htmlspecialchars($post['article_title'], ENT_QUOTES, 'UTF-8'); ?>" />
-                                <!-- <p class="text-center text-muted mt-5"><em><?php echo date('F j, Y', strtotime($post['created_at'] ?? 'now')); ?></em></p> -->
+                                <p class="text-center text-muted mt-5">
+                                    <!-- <em><?php echo date('F j, Y', strtotime($post['created_at'] ?? 'now')); ?></em> -->
+                            </p>
                             </div>
                             <div class="col-md-6 mb-4">
                                 <p class="mt-4">
-                                    <?php echo truncateContent($post['article_content'], 50); ?>
+                                    <?php echo truncateContent($post['article_content'], 200); ?>
                                 </p>
                             </div>
                         </div>
