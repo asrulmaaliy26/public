@@ -28,7 +28,7 @@ $media_url = 'assets/images/'
                             <a href="detail.php?id=38" class="text-light">MASA TA'ARUF SISWA MADRASAH</a>
                         </h3>
                         <ul class="post-meta">
-                            <li><a href="about.html" class="text-light">officialmaalhidayah</a></li>
+                            <li><a href="berita.php" class="text-light">officialmaalhidayah</a></li>
                             <li class="text-light">12 Aug 2024</li>
                         </ul>
                     </div>
@@ -46,7 +46,7 @@ $media_url = 'assets/images/'
                             <a href="detail.php?id=40" class="text-light">TUAN RUMAH SOSIALISASI KMA 450 TAHUN 2024</a>
                         </h3>
                         <ul class="post-meta">
-                            <li><a href="about.html" class="text-light">officialmaalhidayah</a></li>
+                            <li><a href="berita.php" class="text-light">officialmaalhidayah</a></li>
                             <li class="text-light">13 Aug 2024</li>
                         </ul>
                     </div>
@@ -202,7 +202,7 @@ $media_url = 'assets/images/'
                     <?php foreach ($articlesPaginasi4 as $post): ?>
             <div class="col-md-3 col-sm-6">
                 <div class="post post-thumb">
-                    <a href="detail.php?id=1" class="text-decoration-none text-dark post-img">
+                    <a href="detail.php?id=<?= $post['article_id'] ?>" class="text-decoration-none text-dark post-img">
                         <img src="<?= $post['article_image'] ?>" alt="Post Image 1">
                     </a>
                     <div class="post-body">
@@ -213,7 +213,7 @@ $media_url = 'assets/images/'
                         </h3>
                         <ul class="post-meta">
                             <li>
-                                <a style="color: #000;" href="about.html">kegiatan</a>
+                                <a style="color: #000;" href="berita.php">kegiatan</a>
                             </li>
                             <li style="color: #000;">
                                 2024-08-16
