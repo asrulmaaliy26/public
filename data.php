@@ -113,12 +113,31 @@ class HomepageController
         return $this->fetchData("/article/{$slug}");
     }
 
+    function sendContactData($contactData) {
+        $url = 'https://admin.maalhidayahkauman.sch.id/api/contact';
+        
+        $options = [
+            'http' => [
+                'header'  => "Content-type: application/json\r\n",
+                'method'  => 'POST',
+                'content' => json_encode($contactData),
+            ],
+        ];
+        
+        $context  = stream_context_create($options);
+        $result = file_get_contents($url, false, $context);
+        
+        if ($result === FALSE) {
+            die('Error occurred');
+        }
+        
+        return json_decode($result);
+    }    
 }
 
 function truncateText($text, $maxLength) {
     return strlen($text) > $maxLength ? substr($text, 0, $maxLength) . '...' : $text;
 }
-
 
 // Contoh penggunaan
 try {
@@ -126,3 +145,4 @@ try {
 } catch (\Exception $e) {
     $error_message = 'Error: ' . $e->getMessage();
 }
+
