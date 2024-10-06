@@ -114,8 +114,8 @@ class HomepageController
     }
 
     function sendContactData($contactData) {
-        // $url = 'https://admin.maalhidayahkauman.sch.id/api/contact';
-        $url = 'http://127.0.0.1:8000/api/contact';
+        $url = 'https://admin.maalhidayahkauman.sch.id/api/contact';
+        // $url = 'http://127.0.0.1:8000/api/contact';
         
         $options = [
             'http' => [
