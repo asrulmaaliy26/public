@@ -15,18 +15,15 @@ include 'data.php';
     </div>
 </section>
 
-
-
-
-
 <div class="container-fluid">
     <div class="container mt-5">
         <?php
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $contactData = [
-                'contact_id' => 1, // Ganti dengan ID yang sesuai
+                'contact_id' => 1,
                 'name' => $_POST['name'],
                 'email' => $_POST['email'],
+                'pendidikan' => $_POST['pendidikan'],
                 'subject' => $_POST['subject'],
                 'message' => $_POST['message'],
                 'created_at' => date('Y-m-d\TH:i:s.000  000Z'), // Format waktu yang sesuai
@@ -42,6 +39,7 @@ include 'data.php';
         }
         ?>
     </div>
+
     <div style="width: 80%; background: white; padding: 1%; border-radius: 2%; box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.06), -15px -15px 15px rgba(0, 0, 0, 0.06);" class="container help1 mt-5 mb-5">
         <div class="row">
             <div class="col-lg-6 pt-3 my-3">
@@ -91,8 +89,8 @@ include 'data.php';
                 </div>
             </div>
         </div>
-
     </div>
+
     <div class="container my-5">
         <div class="shadow p-4 rounded" style="background-color: white;">
             <h2 class="text-center mb-4" style="color: #14756D;">Hubungi Kami</h2>
@@ -105,6 +103,7 @@ include 'data.php';
                     <label for="email">Email:</label>
                     <input type="email" id="email" name="email" class="form-control mt-2" placeholder="Masukkan email anda untuk balasan" required>
                 </div>
+                <input type="hidden" id="pendidikan" name="pendidikan" value="ma">
                 <div class="form-group m-2">
                     <label for="subject">Subjek:</label>
                     <input type="text" id="subject" name="subject" class="form-control mt-2" placeholder="Masukkan subjek yang ingin di bahas . contoh : layanan ma, kepengurusan dll   " required>
@@ -116,10 +115,7 @@ include 'data.php';
                 <button type="submit" class="btn btn-primary mt-2 btn-block">Submit</button>
             </form>
         </div>
-
     </div>
-
-
 </div>
 
 <iframe style="margin-bottom: -10px" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15801.777997849458!2d111.8664144!3d-8.0560593!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e78e300c4156a41%3A0xeb19fa0c03d695d3!2sMA%20AL%20HIDAYAH!5e0!3m2!1sid!2sid!4v1723621722673!5m2!1sid!2sid" width="100%" height="400" style="border: 0" allowfullscreen="" loading="lazy"></iframe>
