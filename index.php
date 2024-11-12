@@ -4,8 +4,14 @@ include 'base.php';
 
 require 'data.php';
 
-$articlesPaginasi = $controller->getArticlesPaginasi(3); // Misalnya, mengambil halaman 1
-$articlesPaginasi4 = $controller->getArticlesPaginasi(4);
+// $articlesPaginasi = $controller->getArticlesPaginasi(3); // Misalnya, mengambil halaman 1
+// $articlesPaginasi4 = $controller->getArticlesPaginasi(4);
+
+$articlesMA = $controller->getArticleByOneTypes('pendidikan', '3');
+
+// Mengambil hanya 3 artikel pertama
+$articlesPaginasi = array_slice($articlesMA, 0, 3);
+$articlesPaginasi4 = array_slice($articlesMA, 0, 4);
 
 $media_url = 'assets/images/' 
 
