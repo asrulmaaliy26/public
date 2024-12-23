@@ -4,10 +4,16 @@ include 'base.php';
 
 require 'data.php';
 
+//good job
+
 // $articlesPaginasi = $controller->getArticlesPaginasi(3); // Misalnya, mengambil halaman 1
 // $articlesPaginasi4 = $controller->getArticlesPaginasi(4);
 
-$articlesMA = $controller->getArticleByOneTypes('pendidikan', '3');
+$articlesType6 = $controller->getArticleByOneTypes('pendidikan', '3') ?? [];
+$articlesType1 = $controller->getArticleByOneTypes('pendidikan', '1') ?? [];
+
+// Menggabungkan artikel dari kedua tipe
+$articlesMA = array_merge($articlesType6, $articlesType1);
 
 // Mengambil hanya 3 artikel pertama
 $articlesPaginasi = array_slice($articlesMA, 0, 3);
