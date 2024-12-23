@@ -11,8 +11,16 @@ $current_page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
 // Menghitung offset untuk query
 $offset = ($current_page - 1) * $posts_per_page;
 
-// Mendapatkan semua post dan menyortirnya secara ascending berdasarkan ID
-$articlesMA = $controller->getArticleByOneTypes('pendidikan', '3');
+$articlesType6 = $controller->getArticleByOneTypes('pendidikan', '3') ?? [];
+$articlesType1 = $controller->getArticleByOneTypes('pendidikan', '1') ?? [];
+
+// Menggabungkan artikel dari kedua tipe
+$articlesMA = array_merge($articlesType6, $articlesType1);
+
+// Mengurutkan artikel berdasarkan tanggal 'created_at'
+usort($articlesMA, function ($a, $b) {
+    return strtotime($b['created_at']) - strtotime($a['created_at']);
+});
 
 // Mendapatkan jumlah total post
 $total_posts = count($articlesMA);
