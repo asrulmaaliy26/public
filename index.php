@@ -15,6 +15,11 @@ $articlesType1 = $controller->getArticleByOneTypes('pendidikan', '1') ?? [];
 // Menggabungkan artikel dari kedua tipe
 $articlesMA = array_merge($articlesType6, $articlesType1);
 
+// Mengurutkan artikel berdasarkan tanggal 'created_at'
+usort($articlesMA, function ($a, $b) {
+    return strtotime($b['created_at']) - strtotime($a['created_at']);
+});
+
 // Mengambil hanya 3 artikel pertama
 $articlesPaginasi = array_slice($articlesMA, 0, 3);
 $articlesPaginasi4 = array_slice($articlesMA, 0, 4);

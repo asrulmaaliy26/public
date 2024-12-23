@@ -63,7 +63,14 @@ function truncateContent($text, $maxLength) {
                             </div>
                             <div class="col-md-6 mb-4">
                                 <p class="mt-4">
-                                    <?php echo truncateContent($post['article_content'], 200); ?>
+                                    <?php 
+                                        // Deteksi apakah konten memiliki gambar menggunakan regex
+                                        if (preg_match('/<img[^>]*>/i', $post['article_content'])) {
+                                            echo "Lihat gambar selengkapnya";
+                                        } else {
+                                            echo truncateContent($post['article_content'], 200);
+                                        }
+                                    ?>
                                 </p>
                             </div>
                         </div>
@@ -122,7 +129,16 @@ function truncateContent($text, $maxLength) {
                     </a>
                     <div class="card-body">
                         <h5 class="card-title"><?php echo htmlspecialchars($post['article_title'], ENT_QUOTES, 'UTF-8'); ?></h5>
-                        <p class="card-text"><?php echo truncateContent($post['article_content'], 20); ?></p>
+                        <p class="card-text">
+                            <?php 
+                                // Deteksi apakah konten memiliki gambar menggunakan regex
+                                if (preg_match('/<img[^>]*>/i', $post['article_content'])) {
+                                    echo "Lihat gambar selengkapnya";
+                                } else {
+                                    echo truncateContent($post['article_content'], 20);
+                                }
+                            ?>
+                        </p>
                     </div>
                 </div>
                 <?php endforeach; ?>
