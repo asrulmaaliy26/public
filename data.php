@@ -76,6 +76,7 @@ class HomepageController
     }
 
     // Fungsi untuk mengambil data dari API
+    // Fungsi untuk mengambil data dari API
     private function fetchData($endpoint)
     {
         $url = $this->uri . $endpoint;
@@ -83,23 +84,36 @@ class HomepageController
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($ch, CURLOPT_TIMEOUT, 10); // batas waktu 10 detik
+        curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 5); // timeout koneksi 5 detik
 
         $response = curl_exec($ch);
 
+        // Cek error koneksi
         if (curl_errno($ch)) {
-            throw new \Exception('cURL Error: ' . curl_error($ch));
+            curl_close($ch);
+            throw new \Exception("Tidak dapat mengakses API: " . curl_error($ch));
         }
 
+        // Cek HTTP status code
+        $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
         curl_close($ch);
 
-        // Debug output
+        if ($httpCode !== 200) {
+            throw new \Exception("API mengembalikan kode HTTP: {$httpCode}");
+        }
+
+        // Decode JSON
         $data = json_decode($response, true);
-        if (!is_array($data)) {
-            throw new \Exception('Invalid data format received from API.');
+
+        // Cek apakah hasilnya valid dan tidak kosong
+        if (!is_array($data) || empty($data)) {
+            throw new \Exception("Data dari API kosong atau tidak valid.");
         }
 
         return $data;
     }
+
 
     // Fungsi untuk mengambil artikel
     private function fetchArticles()
@@ -113,10 +127,11 @@ class HomepageController
         return $this->fetchData("/article/{$slug}");
     }
 
-    function sendContactData($contactData) {
+    function sendContactData($contactData)
+    {
         $url = 'https://admin.maalhidayahkauman.sch.id/api/contact';
         // $url = 'http://127.0.0.1:8000/api/contact';
-        
+
         $options = [
             'http' => [
                 'header'  => "Content-type: application/json\r\n",
@@ -125,19 +140,20 @@ class HomepageController
             ],
         ];
 
-        
+
         $context  = stream_context_create($options);
         $result = file_get_contents($url, false, $context);
 
         if ($result === FALSE) {
             die('Error occurred');
         }
-        
+
         return json_decode($result);
-    }    
+    }
 }
 
-function truncateText($text, $maxLength) {
+function truncateText($text, $maxLength)
+{
     return strlen($text) > $maxLength ? substr($text, 0, $maxLength) . '...' : $text;
 }
 
@@ -147,4 +163,3 @@ try {
 } catch (\Exception $e) {
     $error_message = 'Error: ' . $e->getMessage();
 }
-
