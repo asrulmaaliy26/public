@@ -32,7 +32,7 @@ $currentPage = basename($_SERVER['PHP_SELF']);
                         <div id="navbarMain" class="collapse navbar-collapse">
                             <ul class="navbar-nav me-auto">
                                 <li class="nav-item">
-                                    <a href="index.php" class="nav-link <?= $currentPage == 'index.php' ? 'active' : '' ?>">Home</a>
+                                    <a href="index.php" class="nav-link <?= $currentPage == 'index.php' ? 'active' : '' ?>">Hom</a>
                                 </li>
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle <?= in_array($currentPage, ['visimisi.php', 'strukturorganisasi.php', 'prestasima.php']) ? 'active' : '' ?>" id="dropdown01" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tentang Kami</a>
